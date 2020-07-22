@@ -1,0 +1,116 @@
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+@use 'tokens' as *;
+
+@function map-deep($map, $keys...) {
+	@each $key in $keys {
+		$map: map.get($map, $key);
+	}
+
+	@return $map;
+}
+
+@function compose($classname) {
+	@return string.slice(#{$classname}, 2);
+}
+
+@function t2c($target, $context, $unit: vw) {
+	$result: null;
+
+	@if meta.type-of($context) == number {
+		$result: calc((#{$target} / #{$context}) * 100);
+	}
+
+	@else if map.has-key($breakpoint, $context) {
+		$result: calc((#{$target} / #{map.get($breakpoint, $context)}) * 100);
+	}
+
+	@else {
+		@error 'Unknown context argument <#{$context}>';
+	}
+
+	@if $unit == p {
+		@return (calc(#{$result} * 1%));
+	}
+
+	@else if $unit == vw {
+		@return (calc(#{$result} * 1vw));
+	}
+
+	@else {
+		@error 'Unknown unit <#{$unit}>';
+	}
+}
+
+@function em($px, $context: $size_font_base) {
+	@return calc((#{$px} / #{$context}) * 1em);
+}
+
+@function rem($px, $base: $size_font_base) {
+	@return calc((#{$px} / #{$base}) * 1rem);
+}
+
+@function to-number($value) {
+	@if meta.type-of($value) == 'number' {
+		@return $value;
+	}
+
+	@else if meta.type-of($value) != 'string' {
+		$_: log('Value for `to-number` should be a number or a string.');
+	}
+
+	$result: 0;
+	$digits: 0;
+	$minus: string.slice($value, 1, 1) == '-';
+	$numbers:
+		('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+
+	@for $i from if($minus, 2, 1) through string.length($value) {
+		$character: string.slice($value, $i, $i);
+
+		@if $character == '.' {
+			$digits: 1;
+		}
+
+		@else if $digits == 0 {
+			$result: $result * 10 + map.get($numbers, $character);
+		}
+
+		@else {
+			$digits: $digits * 10;
+			$result: $result + map.get($numbers, $character) / $digits;
+		}
+	}
+
+	@return if($minus, -$result, $result);
+}
+
+@function locks(
+	$size_min,
+	$size_max,
+	$viewport_min: to-number(map.get($breakpoint, xs)),
+	$viewport_max: to-number(map.get($breakpoint, xl)),
+) {
+	$size_increase: ($size_max - $size_min);
+	$viewport_increase: ($viewport_max - $viewport_min);
+	$slope: ($size_increase) / ($viewport_increase);
+	$initial_size: ($size_min - $slope * $viewport_min) / $size_font_base;
+
+	@return calc(#{$slope * 100}vw + #{$initial_size}rem);
+}
+
+@function aspect-ratio($size, $ratio) {
+	@return calc(#{$size} / (#{$ratio}));
+}
+
+@function image-path($name, $path: map-deep($asset, 'image', 'dir')) {
+	@return $path + $name;
+}
+
+@function compose-shadow(
+	$value,
+	$color: color.scale($color_base_forest, $alpha: -85%)) {
+	@return $value $color;
+}

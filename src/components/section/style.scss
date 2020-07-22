@@ -1,0 +1,11 @@
+$root: '.section';
+
+@use 'config' as *;
+@use 'style_hero' with ($root: $root);
+@use 'style_about' with ($root: $root);
+@use 'style_projects' with ($root: $root);
+@use 'style_features' with ($root: $root);
+
+#{$root} {
+	grid-column: #{$grid_full};
+}

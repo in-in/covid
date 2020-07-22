@@ -1,0 +1,39 @@
+# logs
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# runtime data
+*.pid
+*.pid.lock
+*.seed
+pids
+
+# dependency
+.pnp
+.pnp.js
+.yarn/build-state.yml
+.yarn/unplugged
+node_modules/
+
+# cache
+.cache
+.npm
+.eslintcache
+
+# dotenv
+.env*
+
+# misc
+.DS_Store
+
+# temporary folders
+temp
+tmp
+
+# generated files
+.next/
+dist/
+out/

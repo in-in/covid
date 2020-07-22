@@ -1,0 +1,6 @@
+@use 'mixins' as *;
+
+@include font_face(Inconsolata, inconsolata-latin-regular, 400);
+@include font_face(Inconsolata, inconsolata-latin-700, 700);
+@include font_face(Raleway, raleway-latin-regular, 400);
+@include font_face(Raleway, raleway-latin-700, 700);

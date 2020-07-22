@@ -1,0 +1,20 @@
+include ../copy/index.pug
+include ../headingList/index.pug
+include ../logo/index.pug
+include ../social/index.pug
+
+mixin footer()
+	footer(class=s.footer)&attributes(attributes)
+		div(class=s.footer_inner)
+			div(class=cx(s.footer_item, s.footer_contacts))
+				+headingList(d.contacts.phone)
+				+headingList(d.contacts.email)
+				+headingList(d.contacts.address)
+				+social()(class=s.footer_social)
+			div(class=cx(s.footer_item, s.footer_links))
+				+headingList(d.links.services)
+				+headingList(d.links.help)
+				+headingList(d.links.company)
+			div(class=cx(s.footer_item, s.footer_copy))
+				+logo('light')
+				+copy()

@@ -1,0 +1,32 @@
+$root: null !default;
+
+@use 'config' as *;
+
+#{$root}__features {
+	--row: 5;
+
+	display: grid;
+	grid-template-rows: repeat(var(--row), 1fr);
+	grid-template-columns: inherit;
+	grid-row: 31 / span var(--row);
+	gap: inherit;
+
+	#{$root}_inner {
+		--row: 4;
+
+		display: grid;
+		grid-template-rows: repeat(var(--row), 1fr);
+		grid-template-columns: repeat(6, 1fr);
+		grid-row: 2 / span var(--row);
+		grid-column: #{$grid_full};
+		gap: inherit;
+
+		@include breakpoint(s, '<') {
+			@include container();
+		}
+
+		@include breakpoint(s) {
+			grid-column: #{$grid_inner};
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"github": {
+		"silent": true
+	},
+	"routes": [
+		{
+			"src": "/.*",
+			"headers": {
+				"cache-control": "max-age=31536000",
+				"content-security-policy": "default-src https:; connect-src 'self'; manifest-src 'self'; font-src 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'unsafe-inline' 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self';",
+				"x-content-type-options": "nosniff",
+				"x-frame-options": "deny",
+				"x-xss-protection": "1; mode=block",
+				"accept-encoding": "br"
+			}
+		}
+	]
+}

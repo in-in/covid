@@ -1,0 +1,6 @@
+include ../icon/index.pug
+
+mixin logo(theme='dark')
+	a(href='#' class=cx(s.logo, s[`logo__${theme}`]))&attributes(attributes)
+		+icon('assetIconLogo')(class=s.logo_icon)
+		| Covid

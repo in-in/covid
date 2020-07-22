@@ -1,0 +1,11 @@
+@use 'config' as *;
+
+.about {
+	> *:not(:last-child) {
+		margin-bottom: em($spacing_100);
+	}
+
+	&_subheading {
+		text-transform: uppercase;
+	}
+}

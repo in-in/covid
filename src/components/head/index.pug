@@ -1,0 +1,13 @@
+block head
+	- let title = 'Covid';
+
+	include ../meta/index.pug
+	include ../favicon/index.pug
+
+	each css in htmlWebpackPlugin.files.css
+		if css.includes('inline')
+			style !{compilation.assets[css].source()}
+		else
+			link(rel='stylesheet' href= css)
+
+	title= pageTitle ? `${title} | ${pageTitle}` : title

@@ -1,0 +1,10 @@
+@use 'config' as *;
+
+.text {
+	font-size: $size_font_ms_0 + em;
+	line-height: $size_line_height_normal;
+
+	&__light {
+		color: $color_font_light;
+	}
+}

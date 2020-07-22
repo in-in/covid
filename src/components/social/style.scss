@@ -1,0 +1,37 @@
+@use 'config' as *;
+
+.social {
+	$root: &;
+
+	display: flex;
+	justify-content: space-evenly;
+
+	&_item {
+		display: flex;
+		flex-shrink: 0;
+		width: em($size_social_icon);
+		height: em($size_social_icon);
+		border-radius: $size_border_radius_circle;
+		background-color: $color_base_husky;
+
+		&:not(:last-child) {
+			margin-inline-end: em($spacing_60);
+		}
+	}
+
+	&_link {
+		padding: em($spacing_80);
+
+		@include hover($selector: #{$root}_icon) {
+			fill: $color_base_schnipo;
+		}
+	}
+
+	&_icon {
+		width: 100%;
+		height: auto;
+		fill: $color_base_forest;
+
+		@include transition(fill);
+	}
+}

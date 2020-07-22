@@ -1,0 +1,26 @@
+include ../heading/index.pug
+include ../link/index.pug
+include ../review/index.pug
+include ../text/index.pug
+
+mixin project(info, index)
+	- let {description, image, link, title} = info;
+	li(class=s.project)&attributes(attributes)
+		div(class=s.project_image)
+		+review(d.review[++index])(class=s.project_review)
+		div(class=s.project_info)
+			+heading({text: title, tag: 'h3', modifier: 'h3'})
+			+text(description)
+			+link({str: 'View Case Study', href: link})
+
+mixin projects(list)
+	div(class=s.projects)&attributes(attributes)
+		header(class=s.projects_header)
+			+heading({
+				text: d.projects.heading,
+				tag: 'h2',
+				modifier: 'h2'})(class=s.projects_heading)
+			+text(d.projects.description)(class=s.projects_description)
+		ul(class=s.projects_list)
+			each item, index in list
+				+project(item, index)(class=s.projects_item)

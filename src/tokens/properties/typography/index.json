@@ -1,0 +1,12 @@
+{
+	"typography": {
+		"weight": {
+			"bold": {
+				"value": 700
+			},
+			"links": {
+				"value": "{typography.weight.bold.value}"
+			}
+		}
+	}
+}

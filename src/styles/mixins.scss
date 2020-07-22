@@ -1,0 +1,188 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'sass:color';
+@use 'functions' as *;
+@use 'tokens' as *;
+
+@mixin breakpoint($size, $operator: '>=') {
+	@if map.get($breakpoint, $size) {
+		@media (width $operator map.get($breakpoint, $size) + px) {
+			@content;
+		}
+	}
+
+	@else {
+		@error 'Unknown size: #{$size}';
+	}
+}
+
+/* stylelint-disable function-url-quotes */
+@mixin font_face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
+	@font-face {
+		font-family: string.quote($name);
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+		src:
+			url(
+				string.quote(
+					map-deep(
+						$asset, "font", "path"
+					) + $filename + '.' + $ext))
+			format(string.quote($ext));
+	}
+}
+/* stylelint-enable */
+
+@mixin transition(
+	$prop: all,
+	$duration: $time_base,
+	$timing: $easing_base) {
+	transition-property: $prop;
+	transition-duration: $duration;
+	transition-timing-function: $timing;
+}
+
+@mixin hover($selector: null, $combinator: ' ') {
+	@media (hover: hover) {
+		&:hover#{$combinator}#{$selector},
+		&:focus#{$combinator}#{$selector} {
+			@content;
+		}
+	}
+}
+
+@mixin active($color) {
+	background-position: center;
+	background-image:
+		radial-gradient(
+			circle,
+			$color_base_crystall calc(1% - 1px),
+			color.scale($color, $lightness: -50%) 1%
+		);
+	background-size: 15000%;
+	transition-property: background-size;
+	transition-duration: calc(var(--transition_duration) / 2);
+
+	&:active {
+		background-color: $color_base_crystal;
+		background-size: 100%;
+		color: color.scale($color, $lightness: 80%);
+		transition-property: background-size;
+		transition-duration: 0s;
+	}
+}
+
+@mixin truncate_multiline_text(
+	$lh: $size_line_height_normal,
+	$unit: 1em,
+	$breakpoint: 4,
+	$color-bg: $color_base_white,
+	$min-height: false) {
+	$height: calc((#{$breakpoint} * #{$lh}) * #{$unit});
+
+	position: relative;
+	min-height: if($min-height, $height, auto);
+	max-height: $height;
+	overflow: hidden;
+	background-color: $color-bg;
+	line-height: $lh;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		width: calc((#{$lh} * #{$unit}) + 2ch);
+		height: calc(((((#{$breakpoint} - 1) * #{$lh}) * #{$unit}) - 100%) * -1000);
+		max-height: calc(#{$lh} * #{$unit});
+		background-image:
+			linear-gradient(
+				to right,
+				color.scale($color-bg, $alpha: -100%),
+				$color-bg 50%
+			);
+	}
+}
+
+@mixin truncate_text() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin container() {
+	width: 100%;
+	max-width: $grid_max_width + px;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+}
+
+@mixin bg_resolution($data) {
+	@each $num, $src in $data {
+		@media (min-resolution: #{$num}x) {
+			background-image: url('#{$src}');
+		}
+	}
+}
+
+@mixin triangle($size, $dir: 'right') {
+	&::before {
+		content: '';
+		width: 0;
+		height: 0;
+		border-width:
+			if($dir == 'top', 0, $size)
+			if($dir == 'right', 0, $size)
+			if($dir == 'bottom', 0, $size)
+			if($dir == 'left', 0, $size);
+		border-style: solid;
+		border-color:
+			if($dir == 'bottom', currentColor, $color_base_crystal)
+			if($dir == 'left', currentColor, $color_base_crystal)
+			if($dir == 'top', currentColor, $color_base_crystal)
+			if($dir == 'right', currentColor, $color_base_crystal);
+		@content;
+	}
+}
+
+@mixin separator(
+	$top: true,
+	$bottom: true,
+	$gutter: false,
+	$inner: false,
+	$color: color.scale($color_base_forest, $alpha: -90%)) {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		grid-column: #{$grid_full};
+		width: 100%;
+		height: em($size_separator, $size_font_min);
+		background-color: $color;
+
+		@include breakpoint(s, '<') {
+			right: if($gutter, t2c($spacing_gutter, xs), 0);
+			left: if($gutter, t2c($spacing_gutter, xs), 0);
+			width: if($gutter, calc(100% - #{t2c($spacing_gutter * 2, xs)}), 100%);
+		}
+
+		@include breakpoint(s) {
+			grid-column: if($inner, #{$grid_inner}, null);
+		}
+	}
+
+	&::before {
+		top: 0;
+		display: if($top, null, none);
+	}
+
+	&::after {
+		bottom: 0;
+		display: if($bottom, null, none);
+	}
+}

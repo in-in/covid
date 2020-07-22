@@ -1,0 +1,7 @@
+include ../logo/index.pug
+include ../menu/index.pug
+
+mixin header()
+	header(class=s.header)&attributes(attributes)
+		+logo()
+		+menu(d.menu)

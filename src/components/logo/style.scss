@@ -1,0 +1,27 @@
+@use 'sass:color';
+@use 'config' as *;
+
+.logo {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: $size_font_ms_u_2 + em;
+	font-weight: $typography_weight_bold;
+
+	&__light {
+		color: $color_base_husky;
+		filter: drop-shadow(0 0 em($spacing_40) $color_base_forest);
+	}
+
+	&__dark {
+		color: $color_base_forest;
+		filter: drop-shadow(0 0 em($spacing_40) $color_base_husky);
+	}
+
+	&_icon {
+		width: em($spacing_110);
+		height: auto;
+		margin-inline-end: em($spacing_40);
+		fill: currentColor;
+	}
+}

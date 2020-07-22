@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    pug-linter:
+      glob: "*.pug"
+      run: pug-lint -c .config/.pug-lintrc.json {staged_files}
+    stylelint:
+      glob: "*.scss"
+      run: stylelint --max-warnings=0 --fix {staged_files} && git add {staged_files}

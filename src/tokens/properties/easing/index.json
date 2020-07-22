@@ -1,0 +1,7 @@
+{
+	"easing": {
+		"base": {
+			"value": "ease-in-out"
+		}
+	}
+}

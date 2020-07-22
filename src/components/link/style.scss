@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use 'config' as *;
+
+.link {
+	display: inline-flex;
+	align-items: center;
+	width: max-content;
+	font-size: $size_font_ms_0 + em;
+	font-weight: $typography_weight_links;
+	line-height: $size_line_height_normal;
+
+	&__light {
+		color: color.scale($color_base_schnipo, $lightness: -38%);
+	}
+
+	&__dark {
+		color: color.scale($color_base_schnipo, $lightness: 20%);
+	}
+
+	&_text {
+		text-decoration: underline;
+
+		@include transition(text-decoration-color);
+
+		@include hover() {
+			text-decoration-color: $color_base_crystal;
+		}
+	}
+
+	&__icon {
+		@include triangle(0.25em) {
+			margin-inline-end: 0.25em;
+		}
+	}
+}

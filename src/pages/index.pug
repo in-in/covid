@@ -1,0 +1,17 @@
+extends ../components/layout/index.pug
+
+include ../components/aside/index.pug
+include ../components/footer/index.pug
+include ../components/header/index.pug
+include ../components/main/index.pug
+include ../components/slogan/index.pug
+
+prepend head
+	- let pageTitle = 'Home';
+
+block body
+	+header()(class=s.layout_header)
+	+main()(class=s.layout_main)
+	+aside()(class=s.layout_aside)
+		+slogan()(class=s.layout_inner)
+	+footer()(class=s.layout_footer)

@@ -1,0 +1,13 @@
+@use 'config' as *;
+
+.slogan {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-block-start: em($spacing_120);
+	padding-block-end: em($spacing_120);
+
+	> *:not(:last-child) {
+		margin-bottom: em($spacing_100);
+	}
+}

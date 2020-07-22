@@ -1,0 +1,24 @@
+{
+	"color": {
+		"base": {
+			"forest": {
+				"value": "#004842"
+			},
+			"husky": {
+				"value": "#e2eff9"
+			},
+			"pulp": {
+				"value": "#e6838b"
+			},
+			"schnipo": {
+				"value": "#dd8d54"
+			},
+			"white": {
+				"value": "#fff"
+			},
+			"crystal": {
+				"value": "rgba(255, 255, 255, 0)"
+			}
+		}
+	}
+}

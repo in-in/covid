@@ -1,0 +1,32 @@
+$asset: (
+	'font': (
+		'path': '../assets/fonts/',
+		'main': (
+			'woff2': 'Raleway',
+		),
+		'secondary': (
+			'woff2': 'Inconsolata',
+		),
+	),
+	'icon': (
+		'logo': 'logo.svg',
+		'partners1': 'mozilla.svg',
+		'partners2': 'zoho.svg',
+		'partners3': 'microsoft.svg',
+		'partners4': 'salesforce.svg',
+		'partners5': 'linkedin.svg',
+		'partners6': 'mastercard.svg',
+		'social1': 'social_facebook.svg',
+		'social2': 'social_instagram.svg',
+		'social3': 'social_linkedin.svg',
+		'social4': 'social_twitter.svg',
+	),
+	'image': (
+		'dir': '../assets/images/',
+		'hero': 'hero.svg',
+		'footer': 'footer.svg',
+		'project1': 'project1.svg',
+		'project2': 'project2.svg',
+		'project3': 'project3.svg',
+	),
+);

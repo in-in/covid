@@ -1,0 +1,39 @@
+{
+	"asset": {
+		"icon": {
+			"logo": {
+				"value": "logo.svg"
+			},
+			"partners1": {
+				"value": "mozilla.svg"
+			},
+			"partners2": {
+				"value": "zoho.svg"
+			},
+			"partners3": {
+				"value": "microsoft.svg"
+			},
+			"partners4": {
+				"value": "salesforce.svg"
+			},
+			"partners5": {
+				"value": "linkedin.svg"
+			},
+			"partners6": {
+				"value": "mastercard.svg"
+			},
+			"social1": {
+				"value": "social_facebook.svg"
+			},
+			"social2": {
+				"value": "social_instagram.svg"
+			},
+			"social3": {
+				"value": "social_linkedin.svg"
+			},
+			"social4": {
+				"value": "social_twitter.svg"
+			}
+		}
+	}
+}

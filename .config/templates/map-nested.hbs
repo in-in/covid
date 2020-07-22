@@ -1,0 +1,21 @@
+{{#*inline "key"}}
+{{#if this.value}}
+'{{@key}}': '{{this.value}}',
+{{else}}
+'{{@key}}': (
+	{{#each this}}
+	{{> key}}
+	{{/each}}
+),
+{{/if}}
+{{/inline}}
+
+{{~#if properties}}
+	{{~#each properties~}}
+	${{@key}}: (
+	{{#each this}}
+	{{> key}}
+	{{/each~}}
+	);
+{{/each~}}
+{{/if}}

@@ -1,0 +1,7 @@
+include ../heading/index.pug
+include ../link/index.pug
+
+mixin slogan()
+	div(class=s.slogan)&attributes(attributes)
+		+heading({text: d.slogan.text, tag: 'h2', modifier: 'h1'})
+		+link({str: "Let's get started"})

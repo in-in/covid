@@ -1,0 +1,25 @@
+@use 'sass:color';
+@use 'fonts' as *;
+@use 'config' as *;
+
+*:focus {
+	outline: none !important;
+	box-shadow:
+		0 0 0 rem(2) $color_base_pulp,
+		0 0 0 rem(6) color.scale($color_base_pulp, $alpha: -65%) !important;
+}
+
+BODY {
+	background-color: $color_base_husky;
+	color: $color_base_forest;
+	font-family:
+		map-deep(
+			$asset, 'font', 'main', 'woff2'
+		),
+		sans-serif;
+	font-size: locks($size_font_min, $size_font_max);
+}
+
+::selection {
+	background-color: $color_base_pulp;
+}

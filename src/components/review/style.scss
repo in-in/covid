@@ -1,0 +1,60 @@
+@use 'config' as *;
+
+.review {
+	$root: &;
+
+	z-index: 10;
+	padding: em($spacing_110);
+	border-radius: em($size_border_width_normal);
+	box-shadow: compose-shadow($shadow_review);
+
+	&__large {
+		font-size: $size_font_ms_u_1 + em;
+
+		@include breakpoint(m) {
+			padding-block-start: em($spacing_140);
+		}
+
+		#{$root}_avatar {
+			width: em($spacing_140 * 1.5);
+			height: em($spacing_140 * 1.5);
+		}
+	}
+
+	&_quote {
+		margin-block-end: em($spacing_110);
+		font-style: italic;
+	}
+
+	&_footer {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&_avatar {
+		flex-shrink: 0;
+		width: em($spacing_140);
+		height: em($spacing_140);
+		overflow: hidden;
+		margin-inline-end: em($spacing_60);
+		border-radius: $size_border_radius_circle;
+		box-shadow: compose-shadow($shadow_avatar);
+
+		IMG {
+			width: 100%;
+		}
+	}
+
+	&_meta {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&_name {
+		font-weight: $typography_weight_bold;
+	}
+
+	&_company {
+		font-size: $size_font_ms_d_1 + em;
+	}
+}

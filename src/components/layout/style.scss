@@ -1,0 +1,23 @@
+@use 'config' as *;
+
+.layout {
+	$root: &;
+
+	&_header {
+		@include container();
+
+		border: 1px solid #000;
+	}
+
+	&_main {
+		// f
+	}
+
+	&_aside {
+		// f
+	}
+
+	&_footer {
+		// f
+	}
+}

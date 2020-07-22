@@ -1,0 +1,9 @@
+mixin link(prop)
+	- let {str, href = '#', icon = true, theme = 'light'} = prop;
+	a(
+		href= href
+		class=cx(s.link, { [s.link__icon]: icon }, s[`link__${theme}`])
+		target='_blank'
+		rel='noopener noreferrer'
+		)&attributes(attributes)
+		span(class=s.link_text)= str

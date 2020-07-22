@@ -1,0 +1,9 @@
+include ../heading/index.pug
+include ../link/index.pug
+include ../text/index.pug
+
+mixin hero()
+	div(class=s.hero)&attributes(attributes)
+		+text(d.hero.subheading, 'light')(class=s.hero_subheading)
+		+heading({text: d.hero.heading, tag: 'h1', modifier: 'h1'})(class=s.text__light)
+		+link({str: "Let's Work Together", theme: 'dark'})

@@ -1,0 +1,7 @@
+mixin menu(list)
+	nav(class=s.menu)&attributes(attributes)
+		ul
+			each item in list
+				- let {title, link} = item;
+				li
+					a(href=link)= title

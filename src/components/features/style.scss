@@ -1,0 +1,55 @@
+@use 'config' as *;
+
+.features {
+	&_header {
+		grid-row: 1 / span 1;
+		grid-column: #{$grid_full};
+
+		@include breakpoint(s) {
+			grid-column: 1 / span 4;
+		}
+	}
+
+	&_list {
+		--row: 3;
+
+		display: grid;
+		grid-template-rows: repeat(var(--row), 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		grid-row: 2 / span var(--row);
+		grid-column: #{$grid_full};
+		gap: inherit;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}
+
+.feature {
+	grid-row: 1 / span 3;
+	min-width: em(168);
+	padding: em($spacing_100);
+
+	> *:not(:last-child) {
+		margin-bottom: em($spacing_100);
+	}
+
+	&_heading {
+		text-transform: uppercase;
+
+		@include truncate_text();
+	}
+
+	&_excerpt {
+		@include truncate_multiline_text(
+			$breakpoint: 7,
+			$min-height: true,
+			$color-bg: $color_base_husky);
+
+		@include breakpoint(l) {
+			@include truncate_multiline_text(
+				$breakpoint: 5,
+				$min-height: true,
+				$color-bg: $color_base_husky);
+		}
+	}
+}

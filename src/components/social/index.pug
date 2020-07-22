@@ -1,0 +1,16 @@
+include ../icon/index.pug
+
+mixin social()
+	ul(class=s.social)&attributes(attributes)
+		each item in d.social
+			- let {name, url, icon} = item;
+			li(class=s.social_item)
+				a(
+					href=url
+					target='_blank'
+					rel='noopener noreferrer'
+					title=name
+					aria-label=name
+					class=s.social_link)
+
+					+icon(icon)(class=s.social_icon)

@@ -1,0 +1,29 @@
+@use 'config' as *;
+
+.heading {
+	font-weight: $typography_weight_bold;
+
+	&__h1 {
+		font-size: $size_font_ms_u_5 + em;
+	}
+
+	&__h2 {
+		font-size: $size_font_ms_u_4 + em;
+	}
+
+	&__h3 {
+		font-size: $size_font_ms_u_3 + em;
+	}
+
+	&__h4 {
+		font-size: $size_font_ms_u_2 + em;
+	}
+
+	&__h5 {
+		font-size: $size_font_ms_u_1 + em;
+	}
+
+	&__h6 {
+		font-size: $size_font_ms_0 + em;
+	}
+}

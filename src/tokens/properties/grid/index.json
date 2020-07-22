@@ -1,0 +1,16 @@
+{
+	"grid": {
+		"full": {
+			"value": "'1 / -1'"
+		},
+		"inner": {
+			"value": "'2 / -2'"
+		},
+		"row": {
+			"value": "120"
+		},
+		"max-width": {
+			"value": "1440"
+		}
+	}
+}
