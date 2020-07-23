@@ -6,12 +6,12 @@
 			},
 			"main": {
 				"woff2": {
-					"value": "Raleway"
+					"value": "Poppins"
 				}
 			},
 			"secondary": {
 				"woff2": {
-					"value": "Inconsolata"
+					"value": "Red Hat Display"
 				}
 			}
 		}

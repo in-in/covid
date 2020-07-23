@@ -1,6 +1,13 @@
 @use 'mixins' as *;
+@use 'tokens' as *;
+@use 'functions' as *;
 
-@include font_face(Inconsolata, inconsolata-latin-regular, 400);
-@include font_face(Inconsolata, inconsolata-latin-700, 700);
-@include font_face(Raleway, raleway-latin-regular, 400);
-@include font_face(Raleway, raleway-latin-700, 700);
+@include font_face(
+	map-deep($asset, 'font', 'secondary', 'woff2'),
+	red-hat-display-latin-700, 700);
+@include font_face(
+	map-deep($asset, 'font', 'main', 'woff2'),
+	poppins-latin-regular, 400);
+@include font_face(
+	map-deep($asset, 'font', 'main', 'woff2'),
+	poppins-latin-600, 600);
