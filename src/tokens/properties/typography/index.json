@@ -1,5 +1,13 @@
 {
 	"typography": {
+		"family": {
+			"main": {
+				"value": "'{asset.font.main.woff2.value}', sans-serif"
+			},
+			"secondary": {
+				"value": "'{asset.font.secondary.woff2.value}', sans-serif"
+			}
+		},
 		"weight": {
 			"bold": {
 				"value": 700
