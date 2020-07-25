@@ -4,10 +4,10 @@
 
 @include font_face(
 	map-deep($asset, 'font', 'main', 'woff2'),
-	poppins-latin-regular, 400);
+	poppins-latin-regular, $typography_weight_regular);
 @include font_face(
 	map-deep($asset, 'font', 'secondary', 'woff2'),
-	red-hat-display-latin-700, 700);
+	red-hat-display-latin-700, $typography_weight_bold);
 @include font_face(
 	map-deep($asset, 'font', 'main', 'woff2'),
-	poppins-latin-600, 600);
+	poppins-latin-600, $typography_weight_semi_bold);

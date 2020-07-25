@@ -70,5 +70,7 @@ export const spacingGutter = "16";
 export const timeBase = "0.2s";
 export const typographyFamilyMain = "'Poppins', sans-serif";
 export const typographyFamilySecondary = "'Red Hat Display', sans-serif";
+export const typographyWeightRegular = 400;
+export const typographyWeightSemiBold = 600;
 export const typographyWeightBold = 700;
 export const typographyWeightLinks = 700;

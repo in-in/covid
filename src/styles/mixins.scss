@@ -17,7 +17,12 @@
 }
 
 /* stylelint-disable function-url-quotes */
-@mixin font_face($name, $filename, $weight: 400, $style: normal, $ext: woff2) {
+@mixin font_face(
+	$name,
+	$filename,
+	$weight: $typography_weight_regular,
+	$style: normal,
+	$ext: woff2) {
 	@font-face {
 		font-family: string.quote($name);
 		font-weight: $weight;
