@@ -2,10 +2,10 @@
 	"color": {
 		"font": {
 			"base": {
-				"value": "{color.base.forest.value}"
+				"value": "{color.base.davys-grey.value}"
 			},
-			"light": {
-				"value": "{color.base.husky.value}"
+			"title": {
+				"value": "{color.base.jungle-green.value}"
 			}
 		}
 	}

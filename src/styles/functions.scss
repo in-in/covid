@@ -111,6 +111,6 @@
 
 @function compose-shadow(
 	$value,
-	$color: color.scale($color_base_forest, $alpha: -85%)) {
+	$color: color.scale($color_base_jungle_green, $alpha: -85%)) {
 	@return $value $color;
 }

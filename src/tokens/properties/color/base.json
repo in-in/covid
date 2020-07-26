@@ -1,17 +1,14 @@
 {
 	"color": {
 		"base": {
-			"forest": {
-				"value": "#004842"
+			"jungle-green": {
+				"value": "#035755"
 			},
-			"husky": {
-				"value": "#e2eff9"
+			"davys-grey": {
+				"value": "#4b4f51"
 			},
-			"pulp": {
-				"value": "#e6838b"
-			},
-			"schnipo": {
-				"value": "#dd8d54"
+			"carnation": {
+				"value": "#fa5652"
 			},
 			"white": {
 				"value": "#fff"
