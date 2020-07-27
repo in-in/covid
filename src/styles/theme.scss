@@ -12,6 +12,7 @@ BODY {
 	color: $color_font_base;
 	font-family: $typography_family_main;
 	font-size: locks($size_font_min, $size_font_max);
+	line-height: $size_line_height_normal;
 }
 
 ::selection {
