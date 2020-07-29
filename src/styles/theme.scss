@@ -3,8 +3,9 @@
 
 *:focus {
 	outline: none !important;
-	box-shadow: 0 0 0 rem(2) $color_base_carnation,
-	// 0 0 0 rem(6) color.scale($color_base_pulp, $alpha: -65%) !important;
+	box-shadow:
+		inset 0 0 0 rem(2) $color_base_carnation,
+		inset 0 0 0 rem(4) color.scale($color_base_jungle_green, $alpha: -65%) !important;
 }
 
 BODY {
@@ -16,5 +17,9 @@ BODY {
 }
 
 ::selection {
-	// background-color: $color_base_pulp;
+	background-color:
+		color.adjust(
+			$color_base_carnation,
+			$hue: 356, $saturation: 5.62, $lightness: 26.67
+		);
 }
