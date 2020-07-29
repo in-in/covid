@@ -122,6 +122,8 @@
 	max-width: $grid_max_width + px;
 	margin-inline-start: auto;
 	margin-inline-end: auto;
+	padding-inline-start: em($spacing_gutter);
+	padding-inline-end: em($spacing_gutter);
 }
 
 @mixin bg_resolution($data) {
