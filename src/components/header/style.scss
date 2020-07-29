@@ -1,8 +1,39 @@
 @use 'config' as *;
 
 .header {
-	z-index: 10;
-	display: flex;
+	display: grid;
+	grid-template-rows: repeat(2, min-content);
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
 	align-items: center;
+	gap: em($spacing_110);
 	width: 100%;
+	padding-block-start: em($spacing_110);
+	padding-block-end: em($spacing_110);
+
+	@include breakpoint(m) {
+		grid-template-rows: 1fr;
+		grid-template-columns: min-content 1fr min-content;
+	}
+
+	&_logo {
+		justify-self: start;
+	}
+
+	&_menu {
+		grid-row: 2;
+		grid-column: 1 / -1;
+		max-width: 100%;
+
+		@include breakpoint(m) {
+			grid-row: initial;
+			grid-column: initial;
+			justify-self: end;
+			width: auto;
+		}
+	}
+
+	&_button {
+		justify-self: end;
+	}
 }

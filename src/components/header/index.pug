@@ -1,7 +1,9 @@
 include ../logo/index.pug
 include ../menu/index.pug
+include ../button/index.pug
 
 mixin header()
 	header(class=s.header)&attributes(attributes)
-		+logo()
-		+menu(d.menu)
+		+logo()(class=s.header_logo)
+		+menu(d.menu)(class=s.header_menu)
+		+button()(class=s.header_button)

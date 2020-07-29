@@ -1,5 +1,86 @@
 @use 'config' as *;
 
 .menu {
-	// keep
+	position: relative;
+	min-width: 0;
+	padding-inline-start: em($spacing_60);
+	padding-inline-end: em($spacing_60);
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		z-index: 20;
+		width: em($spacing_60);
+		height: 100%;
+		pointer-events: none;
+	}
+
+	&::before {
+		right: 0;
+		background-image:
+			linear-gradient(
+				to right,
+				$color_base_crystal 0%,
+				$color_base_white 100%
+			);
+	}
+
+	&::after {
+		left: 0;
+		background-image:
+			linear-gradient(
+				to left,
+				$color_base_crystal 0%,
+				$color_base_white 100%
+			);
+	}
+
+	&_list {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: auto;
+	}
+
+	&_item {
+		white-space: nowrap;
+
+		&:not(:last-child) {
+			margin-inline-end: em($spacing_120);
+		}
+	}
+
+	&_link {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: em($spacing_60);
+		color: $color_base_jungle_green;
+
+		&::after {
+			content: '';
+			display: block;
+			border: 2px solid $color_base_crystal;
+			border-radius: $size_border_radius_circle;
+
+			@include transition(border-color);
+
+			@include breakpoint(m) {
+				border: 3px solid $color_base_crystal;
+			}
+		}
+
+		@include transition(color);
+
+		@include hover() {
+			color: $color_base_carnation;
+
+			&::after {
+				border-color: $color_base_carnation;
+			}
+		}
+	}
 }
