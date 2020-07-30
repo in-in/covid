@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="#"><img src="" alt="Covid" title="Covid" width="100" height="100"></a>
+  <a href="#"><img src="" alt="Covid-19" title="Covid-19" width="100" height="100"></a>
   <br>
   Covid
   <br>
