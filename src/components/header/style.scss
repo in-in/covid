@@ -13,7 +13,7 @@
 
 	@include breakpoint(m) {
 		grid-template-rows: 1fr;
-		grid-template-columns: min-content 1fr min-content;
+		grid-template-columns: max-content 1fr max-content;
 	}
 
 	&_logo {

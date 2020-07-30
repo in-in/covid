@@ -5,10 +5,10 @@
 	grid-template-rows: repeat(2, rem($grid_row)) repeat(5, min-content);
 	grid-template-columns: inherit;
 	gap: inherit;
-	background-color: $color_base_forest;
+	background-color: $color_base_jungle_green;
 	background-image: url(#{image-path(map-deep($asset, 'image', 'footer'))});
 	background-blend-mode: saturation;
-	color: $color_base_husky;
+	color: #ccc;
 
 	&_inner {
 		display: grid;
@@ -40,13 +40,13 @@
 	&_contacts {
 		grid-row: 1 / span 2;
 
-		@include separator($top: false, $color: $color_base_husky);
+		@include separator($top: false, $color: #ccc);
 	}
 
 	&_links {
 		grid-row: 3 / span 2;
 
-		@include separator($top: false, $color: $color_base_husky);
+		@include separator($top: false, $color: #ccc);
 	}
 
 	&_copy {

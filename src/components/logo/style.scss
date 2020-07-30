@@ -1,27 +1,19 @@
-@use 'sass:color';
 @use 'config' as *;
 
 .logo {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
+	color: $color_base_jungle_green;
 	text-transform: uppercase;
-	font-size: $size_font_ms_u_2 + em;
+	white-space: nowrap;
+	font-family: $typography_family_secondary;
+	font-size: $size_font_ms_u_1 + em;
 	font-weight: $typography_weight_bold;
 
-	&__light {
-		color: $color_base_husky;
-		filter: drop-shadow(0 0 em($spacing_40) $color_base_forest);
-	}
-
-	&__dark {
-		color: $color_base_forest;
-		filter: drop-shadow(0 0 em($spacing_40) $color_base_husky);
-	}
-
 	&_icon {
-		width: em($spacing_110);
+		width: em($size_logo, ($size_font_ms_u_1 * $size_font_max));
 		height: auto;
-		margin-inline-end: em($spacing_40);
-		fill: currentColor;
+		margin-inline-end: em($spacing_80);
 	}
 }
