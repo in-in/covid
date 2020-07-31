@@ -1,2 +1,4 @@
-mixin button()
-	button(class=s.button)&attributes(attributes) foobar
+mixin button(text, ...modifier)
+	button(
+		class=cx(s.button, modifier.map(mod => s[`button__${mod}`]))
+		)&attributes(attributes)= text

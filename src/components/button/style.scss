@@ -1,5 +1,36 @@
+@use 'sass:color';
 @use 'config' as *;
 
 .button {
-	background-color: #20b2aa;
+	--spacing: #{$spacing_80};
+
+	padding-block-start: em(var(--spacing));
+	padding-block-end: em(var(--spacing));
+	padding-inline-start: em($spacing_120);
+	padding-inline-end: em($spacing_120);
+	border-radius: em(calc(var(--spacing) * 2));
+	font-weight: $typography_weight_semi_bold;
+
+	&__big {
+		--spacing: #{$spacing_100};
+	}
+
+	&__primary {
+		background-color: $color_base_carnation;
+		color: $color_base_white;
+	}
+
+	&__secondary {
+		background-color:
+			color.adjust(
+				$color_base_carnation,
+				$hue: 356, $saturation: 5.62, $lightness: 26.67
+			);
+		color: $color_base_carnation;
+	}
+
+	&__plain {
+		border: em(1) solid $color_base_carnation;
+		color: $color_base_carnation;
+	}
 }

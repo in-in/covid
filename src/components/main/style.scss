@@ -1,14 +1,5 @@
 @use 'config' as *;
 
 .main {
-	display: grid;
-	grid-template-rows: repeat(37, 1fr);
-	grid-template-columns: inherit;
-	gap: inherit;
-
-	&_aside {
-		grid-row: 6 / span 2;
-		grid-column: 2 / -1;
-		background-color: $color_base_husky;
-	}
+	// keep
 }

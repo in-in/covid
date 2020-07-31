@@ -6,17 +6,24 @@ include ../partners/index.pug
 include ../projects/index.pug
 include ../review/index.pug
 include ../section/index.pug
+include ../button/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
-		+section()(class=s.section__hero)
-			+hero()(class=s.section_inner)
-		+aside()(class=s.main_aside)
-			+partners(d.partners)
-		+section()(class=s.section__about)
-			+about()(class=cx(s.section_inner, s.section_inner__start))
-			+review(d.review[0])(class=cx(s.section_inner, s.section_inner__end))
-		+section()(class=s.section__projects)
-			+projects(d.projects.list)(class=s.section_inner)
-		+section()(class=s.section__features)
-			+features(d.features.list)(class=cx(s.section_inner))
+		p A Visual Type Scale
+		+button('Let Us Help', 'primary', 'big')
+		+button('Learn More', 'primary')
+		+button('Send', 'secondary')
+		+button('Contact', 'plain')
+
+	//- 	+section()(class=s.section__hero)
+	//- 		+hero()(class=s.section_inner)
+	//- 	+aside()(class=s.main_aside)
+	//- 		+partners(d.partners)
+	//- 	+section()(class=s.section__about)
+	//- 		+about()(class=cx(s.section_inner, s.section_inner__start))
+	//- 		+review(d.review[0])(class=cx(s.section_inner, s.section_inner__end))
+	//- 	+section()(class=s.section__projects)
+	//- 		+projects(d.projects.list)(class=s.section_inner)
+	//- 	+section()(class=s.section__features)
+	//- 		+features(d.features.list)(class=cx(s.section_inner))
