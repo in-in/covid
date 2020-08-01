@@ -2,6 +2,9 @@
 	"easing": {
 		"base": {
 			"value": "ease-in-out"
+		},
+		"bounce": {
+			"value": "cubic-bezier(0.5, 2, 0.3, -0.35)"
 		}
 	}
 }

@@ -2,6 +2,9 @@
 	"time": {
 		"base": {
 			"value": "0.2s"
+		},
+		"slowly": {
+			"value": "0.4s"
 		}
 	}
 }

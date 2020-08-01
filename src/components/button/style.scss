@@ -10,6 +10,14 @@
 	padding-inline-end: em($spacing_120);
 	border-radius: em(calc(var(--spacing) * 2));
 	font-weight: $typography_weight_semi_bold;
+	transform: perspective(1px) translateZ(0);
+
+	@include transition($prop: transform, $duration: $time_slowly);
+
+	@include hover() {
+		transition-timing-function: $easing_bounce;
+		transform: scale(0.9);
+	}
 
 	&__big {
 		--spacing: #{$spacing_100};
