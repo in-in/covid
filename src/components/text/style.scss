@@ -1,10 +1,9 @@
 @use 'config' as *;
 
 .text {
-	font-size: $size_font_ms_0 + em;
-	line-height: $size_line_height_normal;
+	font-size: $size_font_ms_u_1 + em;
 
-	&__light {
-		color: $color_font_light;
+	&__big {
+		font-size: $size_font_ms_u_2 + em;
 	}
 }

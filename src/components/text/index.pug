@@ -1,5 +1,5 @@
-mixin text(str, modifier)
+mixin text(text, ...modifier)
 	p(
-		class=cx(s.text, s[`text__${modifier}`])
+		class=cx(s.text, modifier.map(mod => s[`text__${mod}`]))
 		)&attributes(attributes)
-		= str
+		= text
