@@ -53,23 +53,23 @@
 
 	&_link {
 		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		display: block;
 		padding: em($spacing_60);
 		color: $color_base_jungle_green;
 
 		&::after {
 			content: '';
-			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
 			border: 2px solid $color_base_crystal;
 			border-radius: $size_border_radius_circle;
+			transform: translateX(-50%);
 
 			@include transition(border-color);
 
 			@include breakpoint(m) {
-				border: 3px solid $color_base_crystal;
+				border-width: 3px;
 			}
 		}
 
