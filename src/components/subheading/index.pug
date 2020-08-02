@@ -1,0 +1,5 @@
+mixin subheading(text, ...modifier)
+	p(
+		class=cx(s.subheading, modifier.map(mod => s[`subheading__${mod}`]))
+		)&attributes(attributes)
+		= text
