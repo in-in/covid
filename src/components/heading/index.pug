@@ -1,6 +1,6 @@
-mixin heading(prop)
-	- let {text, tag = 'p', modifier} = prop;
+mixin heading(prop, ...modifier)
+	- let {text, tag = 'p'} = prop;
 	#{tag}(
-		class=cx(s.heading, s[`heading__${modifier}`])
+		class=cx(s.heading, modifier.map(mod => s[`heading__${mod}`]))
 		)&attributes(attributes)
 		= text

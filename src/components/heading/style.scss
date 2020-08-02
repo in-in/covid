@@ -1,14 +1,19 @@
 @use 'config' as *;
 
 .heading {
-	font-weight: $typography_weight_bold;
+	color: $color_base_jungle_green;
+	font-weight: $typography_weight_semi_bold;
 
 	&__h1 {
+		font-family: $typography_family_secondary;
 		font-size: $size_font_ms_u_5 + em;
+		font-weight: $typography_weight_bold;
 	}
 
 	&__h2 {
+		font-family: $typography_family_secondary;
 		font-size: $size_font_ms_u_4 + em;
+		font-weight: $typography_weight_bold;
 	}
 
 	&__h3 {
