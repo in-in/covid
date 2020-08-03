@@ -44,11 +44,11 @@
 	}
 }
 
-@function em($px, $context: $size_font_base) {
+@function em($px, $context: $size_font_max) {
 	@return calc((#{$px} / #{$context}) * 1em);
 }
 
-@function rem($px, $base: $size_font_base) {
+@function rem($px, $base: $size_font_max) {
 	@return calc((#{$px} / #{$base}) * 1rem);
 }
 
