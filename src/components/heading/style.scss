@@ -3,6 +3,7 @@
 .heading {
 	color: $color_base_jungle_green;
 	font-weight: $typography_weight_semi_bold;
+	line-height: calc(2px + #{$size_font_ms_u_5 + ex} + 2px);
 
 	&__h1 {
 		font-family: $typography_family_secondary;
