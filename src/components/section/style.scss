@@ -7,5 +7,5 @@ $root: '.section';
 @use 'style_features' with ($root: $root);
 
 #{$root} {
-	grid-column: #{$grid_full};
+	// grid-column: #{$grid_full};
 }

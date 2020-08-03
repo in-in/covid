@@ -1,35 +1,15 @@
-@use 'sass:color';
 @use 'config' as *;
 
 .hero {
 	overflow: hidden;
-	padding: em($spacing_60);
 
-	@supports not (backdrop-filter: blur(10px)) {
-		background-image:
-			linear-gradient(
-				145deg,
-				color.scale(
-					$color_base_forest,
-					$alpha: -5%
-				) 40%,
-				color.scale(
-					$color_base_forest,
-					$alpha: -30%
-				) 60%
-			);
+	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
+	& > *:not(:last-child):not(&_subheading) {
+		margin-block-end: em($spacing_80);
 	}
 
-	@supports (backdrop-filter: blur(10px)) {
-		background-color: color.scale($color_base_forest, $alpha: -25%);
-		backdrop-filter: blur(10px);
-	}
-
-	> *:not(:last-child) {
-		margin-bottom: em($spacing_100);
-	}
-
+	/* stylelint-enable */
 	&_subheading {
-		text-transform: uppercase;
+		margin-block-end: em($spacing_40);
 	}
 }

@@ -1,9 +1,11 @@
+include ../button/index.pug
 include ../heading/index.pug
-include ../link/index.pug
+include ../subheading/index.pug
 include ../text/index.pug
 
 mixin hero()
 	div(class=s.hero)&attributes(attributes)
-		+text(d.hero.subheading, 'light')(class=s.hero_subheading)
-		+heading({text: d.hero.heading, tag: 'h1', modifier: 'h1'})(class=s.text__light)
-		+link({str: "Let's Work Together", theme: 'dark'})
+		+subheading(d.hero.subheading, 'big')(class=s.hero_subheading)
+		+heading({text: d.hero.heading, tag: 'h1'}, 'h1')
+		+text(d.hero.description, 'big')
+		+button('Let Us Help', 'primary', 'big')

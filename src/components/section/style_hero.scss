@@ -3,33 +3,16 @@ $root: null !default;
 @use 'config' as *;
 
 #{$root}__hero {
-	--row: 6;
-
-	display: grid;
-	grid-template-rows: repeat(var(--row), 1fr);
-	grid-template-columns: inherit;
-	grid-row: 1 / span var(--row);
-	gap: inherit;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: url(#{image-path(map-deep($asset, 'image', 'hero'))});
-	background-size: cover;
-
-	@include breakpoint(s, '<') {
-		@include container();
-	}
 
 	#{$root}_inner {
-		grid-row: 2 / span 3;
-		grid-column: #{$grid_full};
-		height: max-content;
+		display: grid;
+		grid-template-columns: repeat($grid_columns, 1fr);
+		column-gap: em($spacing_gutter);
 
-		@include breakpoint(s) {
-			grid-column: #{$grid_inner};
-		}
+		@include container();
 
-		@include breakpoint(m) {
-			grid-column: 2 / span 3;
+		> * {
+			grid-column: 1 / span 7;
 		}
 	}
 }

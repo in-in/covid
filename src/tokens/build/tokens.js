@@ -37,6 +37,7 @@ export const gridFull = "'1 / -1'";
 export const gridInner = "'2 / -2'";
 export const gridRow = "120";
 export const gridMaxWidth = "1440";
+export const gridColumns = "16";
 export const shadowReview = "50px 50px 100px";
 export const shadowAvatar = "20px 25px 40px";
 export const sizeBorderWidthBase = 1;

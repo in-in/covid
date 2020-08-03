@@ -10,14 +10,9 @@ include ../button/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
-		p A Visual Type Scale
-		+button('Let Us Help', 'primary', 'big')
-		+button('Learn More', 'primary')
-		+button('Send', 'secondary')
-		+button('Contact', 'plain')
-
-	//- 	+section()(class=s.section__hero)
-	//- 		+hero()(class=s.section_inner)
+		+section()(class=s.section__hero)
+			div(class=s.section_inner)
+				+hero()
 	//- 	+aside()(class=s.main_aside)
 	//- 		+partners(d.partners)
 	//- 	+section()(class=s.section__about)

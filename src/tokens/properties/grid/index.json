@@ -11,6 +11,9 @@
 		},
 		"max-width": {
 			"value": "1440"
+		},
+		"columns": {
+			"value": "16"
 		}
 	}
 }
