@@ -1,8 +1,40 @@
+@use 'sass:color';
 $root: null !default;
 
 @use 'config' as *;
 
+$figures: (
+	'0': (
+		'top': 78,
+		'right': 868,
+		'width': 190,
+		'fill': color.scale($color_base_carnation, $alpha: -10%),
+	),
+	'1': (
+		'top': 214,
+		'right': 524,
+		'width': 123,
+		'fill': color.scale($color_base_carnation, $alpha: -18%),
+	),
+	'2': (
+		'top': 42,
+		'right': 8,
+		'width': 113,
+		'fill': color.scale($color_base_carnation, $alpha: -25%),
+	),
+	'3': (
+		'top': 327,
+		'right': 0,
+		'width': 255,
+		'transform': translateX(50%),
+		'fill': color.scale($color_base_carnation, $alpha: -8%),
+	),
+);
+
 #{$root}__hero {
+	position: relative;
+	padding-block-start: em(300);
+	padding-block-end: em(208);
 
 	#{$root}_inner {
 		display: grid;
@@ -14,5 +46,11 @@ $root: null !default;
 		> * {
 			grid-column: 1 / span 7;
 		}
+	}
+
+	#{$root}_virus {
+		height: auto;
+
+		@include figure($figures, 924);
 	}
 }

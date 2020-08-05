@@ -193,3 +193,52 @@
 		display: if($bottom, null, none);
 	}
 }
+
+@mixin figure($data, $container_height, $color: $color_base_carnation) {
+	position: absolute;
+	z-index: 0;
+
+	@each $index, $item in $data {
+		&#{$index} {
+			$width: map.get($item, width);
+
+			top:
+				if(
+					map.get($item, top),
+					t2c(map.get($item, top), $container_height, p),
+					null
+				);
+			right:
+				if(
+					map.get($item, right),
+					t2c(map.get($item, right), xxl),
+					null
+				);
+			bottom:
+				if(
+					map.get($item, bottom),
+					t2c(map.get($item, bottom), $container_height, p),
+					null
+				);
+			left:
+				if(
+					map.get($item, left),
+					t2c(map.get($item, left), xxl),
+					null
+				);
+			width: locks($width / 3, $width);
+			transform:
+				if(
+					map.get($item, transform),
+					map.get($item, transform),
+					null
+				);
+			fill:
+				if(
+					map.get($item, fill),
+					map.get($item, fill),
+					$color
+				);
+		}
+	}
+}
