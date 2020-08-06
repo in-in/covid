@@ -6,18 +6,6 @@
 			},
 			"hero": {
 				"value": "hero.svg"
-			},
-			"footer": {
-				"value": "footer.svg"
-			},
-			"project1": {
-				"value": "project1.svg"
-			},
-			"project2": {
-				"value": "project2.svg"
-			},
-			"project3": {
-				"value": "project3.svg"
 			}
 		}
 	}

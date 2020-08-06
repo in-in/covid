@@ -1,40 +1,49 @@
 @use 'sass:color';
-$root: null !default;
-
+@use 'sass:map';
 @use 'config' as *;
+
+$root: null !default;
 
 $figures: (
 	'0': (
 		'top': 78,
 		'right': 868,
 		'width': 190,
-		'fill': color.scale($color_base_carnation, $alpha: -10%),
+		'fill': color.scale($color_base_carnation, $alpha: -20%),
 	),
 	'1': (
 		'top': 214,
 		'right': 524,
 		'width': 123,
-		'fill': color.scale($color_base_carnation, $alpha: -18%),
+		'fill': color.scale($color_base_carnation, $alpha: -28%),
 	),
 	'2': (
 		'top': 42,
 		'right': 8,
 		'width': 113,
-		'fill': color.scale($color_base_carnation, $alpha: -25%),
+		'fill': color.scale($color_base_carnation, $alpha: -35%),
 	),
 	'3': (
 		'top': 327,
 		'right': 0,
 		'width': 255,
 		'transform': translateX(50%),
-		'fill': color.scale($color_base_carnation, $alpha: -8%),
+		'fill': color.scale($color_base_carnation, $alpha: -18%),
 	),
 );
 
 #{$root}__hero {
 	position: relative;
-	padding-block-start: em(300);
-	padding-block-end: em(208);
+	overflow: hidden;
+	padding-block-start: t2c(300, xxl);
+	padding-block-end: t2c(208, xxl);
+
+	@include breakpoint(s) {
+		background-position: right 10% bottom t2c(90, xxl);
+		background-repeat: no-repeat;
+		background-image: url(#{image-path(map-deep($asset, 'image', 'hero'))});
+		background-size: t2c(860, xxl);
+	}
 
 	#{$root}_inner {
 		display: grid;
@@ -44,12 +53,25 @@ $figures: (
 		@include container();
 
 		> * {
-			grid-column: 1 / span 7;
+			grid-column: #{$grid_full};
+
+			@include breakpoint(s) {
+				grid-column: 1 / span 10;
+			}
+
+			@include breakpoint(m) {
+				grid-column: 1 / span 7;
+			}
 		}
 	}
 
 	#{$root}_virus {
 		height: auto;
+		opacity: 0.5;
+
+		@include breakpoint(s) {
+			opacity: 1;
+		}
 
 		@include figure($figures, 924);
 	}

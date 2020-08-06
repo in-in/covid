@@ -1,8 +1,6 @@
 @use 'config' as *;
 
 .hero {
-	overflow: hidden;
-
 	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
 	& > *:not(:last-child):not(&_subheading) {
 		margin-block-end: em($spacing_80);
