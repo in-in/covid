@@ -1,0 +1,30 @@
+@use 'sass:color';
+@use 'config' as *;
+
+$figures_hero: (
+	'0': (
+		'top': 78,
+		'right': 868,
+		'width': 190,
+		'fill': color.scale($color_base_carnation, $alpha: -20%),
+	),
+	'1': (
+		'top': 214,
+		'right': 524,
+		'width': 123,
+		'fill': color.scale($color_base_carnation, $alpha: -28%),
+	),
+	'2': (
+		'top': 42,
+		'right': 8,
+		'width': 113,
+		'fill': color.scale($color_base_carnation, $alpha: -35%),
+	),
+	'3': (
+		'top': 327,
+		'right': 0,
+		'width': 255,
+		'transform': translateX(50%),
+		'fill': color.scale($color_base_carnation, $alpha: -18%),
+	),
+);
