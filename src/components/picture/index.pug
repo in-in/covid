@@ -12,7 +12,7 @@ mixin picture(src, alt)
 			type=`image/${ext === 'jpg' ? 'jpeg' : ext}`
 		)
 
-	picture
+	picture&attributes(attributes)
 		+source(src, 'webp')
 		if (getExt(src) === '.jpg')
 			+source(src, 'jpg')
