@@ -33,8 +33,7 @@
 				string.quote(
 					map-deep(
 						$asset, "font", "path"
-					) + $filename + '.' + $ext))
-			format(string.quote($ext));
+					) + $filename + '.' + $ext));
 	}
 }
 /* stylelint-enable */
