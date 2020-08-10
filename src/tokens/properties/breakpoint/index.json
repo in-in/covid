@@ -17,6 +17,12 @@
 		},
 		"xxl": {
 			"value": "1920"
+		},
+		"start": {
+			"value": "{breakpoint.xs.value}"
+		},
+		"end": {
+			"value": "{breakpoint.xxl.value}"
 		}
 	}
 }

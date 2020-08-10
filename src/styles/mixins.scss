@@ -173,9 +173,9 @@
 		background-color: $color;
 
 		@include breakpoint(s, '<') {
-			right: if($gutter, t2c($spacing_gutter, xs), 0);
-			left: if($gutter, t2c($spacing_gutter, xs), 0);
-			width: if($gutter, calc(100% - #{t2c($spacing_gutter * 2, xs)}), 100%);
+			right: if($gutter, t2c($spacing_gutter, start), 0);
+			left: if($gutter, t2c($spacing_gutter, start), 0);
+			width: if($gutter, calc(100% - #{t2c($spacing_gutter * 2, start)}), 100%);
 		}
 
 		@include breakpoint(s) {
@@ -211,7 +211,7 @@
 			right:
 				if(
 					map.get($item, right),
-					t2c(map.get($item, right), xxl),
+					t2c(map.get($item, right), end),
 					null
 				);
 			bottom:
@@ -223,7 +223,7 @@
 			left:
 				if(
 					map.get($item, left),
-					t2c(map.get($item, left), xxl),
+					t2c(map.get($item, left), end),
 					null
 				);
 			width: locks($width / 3, $width);

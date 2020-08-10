@@ -6,14 +6,14 @@ $section: null !default;
 #{$section}__hero {
 	position: relative;
 	overflow: hidden;
-	padding-block-start: t2c(300, xxl);
-	padding-block-end: t2c(208, xxl);
+	padding-block-start: t2c(300, end);
+	padding-block-end: t2c(208, end);
 
 	@include breakpoint(s) {
-		background-position: right 10% bottom t2c(90, xxl);
+		background-position: right 10% bottom t2c(90, end);
 		background-repeat: no-repeat;
 		background-image: url(#{image-path(map-deep($asset, 'image', 'hero'))});
-		background-size: t2c(860, xxl);
+		background-size: t2c(860, end);
 	}
 
 	#{$section}_inner {

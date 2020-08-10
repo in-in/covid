@@ -5,14 +5,14 @@ $section: null !default;
 
 #{$section}__overview {
 	position: relative;
-	padding-block-start: t2c(100, xxl);
-	padding-block-end: t2c(178, xxl);
+	padding-block-start: t2c(100, end);
+	padding-block-end: t2c(178, end);
 
 	@include breakpoint(s) {
 		background-position: left 10% top;
 		background-repeat: no-repeat;
 		background-image: url(#{image-path(map-deep($asset, 'image', 'overview'))});
-		background-size: t2c(650, xxl);
+		background-size: t2c(650, end);
 	}
 
 	#{$section}_inner {

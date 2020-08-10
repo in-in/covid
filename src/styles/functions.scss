@@ -90,8 +90,8 @@
 @function locks(
 	$size_min,
 	$size_max,
-	$viewport_min: to-number(map.get($breakpoint, xs)),
-	$viewport_max: to-number(map.get($breakpoint, xxl)),
+	$viewport_min: to-number(map.get($breakpoint, start)),
+	$viewport_max: to-number(map.get($breakpoint, end)),
 ) {
 	$size_increase: ($size_max - $size_min);
 	$viewport_increase: ($viewport_max - $viewport_min);
