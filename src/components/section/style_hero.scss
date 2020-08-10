@@ -1,9 +1,9 @@
 @use 'config' as *;
 @use 'data' as d;
 
-$root: null !default;
+$section: null !default;
 
-#{$root}__hero {
+#{$section}__hero {
 	position: relative;
 	overflow: hidden;
 	padding-block-start: t2c(300, xxl);
@@ -16,7 +16,7 @@ $root: null !default;
 		background-size: t2c(860, xxl);
 	}
 
-	#{$root}_inner {
+	#{$section}_inner {
 		display: grid;
 		grid-template-columns: repeat($grid_columns, 1fr);
 		column-gap: em($spacing_gutter);
@@ -36,7 +36,7 @@ $root: null !default;
 		}
 	}
 
-	#{$root}_virus {
+	#{$section}_virus {
 		height: auto;
 		opacity: 0.5;
 
