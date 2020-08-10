@@ -6,6 +6,9 @@
 			},
 			"hero": {
 				"value": "hero.svg"
+			},
+			"overview": {
+				"value": "overview.svg"
 			}
 		}
 	}

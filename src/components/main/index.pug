@@ -1,9 +1,9 @@
-include ../about/index.pug
 include ../aside/index.pug
 include ../button/index.pug
 include ../features/index.pug
 include ../hero/index.pug
 include ../icon/index.pug
+include ../overview/index.pug
 include ../partners/index.pug
 include ../projects/index.pug
 include ../review/index.pug
@@ -17,11 +17,12 @@ mixin main()
 			each i, idx in Array(4)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
-	//- 	+aside()(class=s.main_aside)
-	//- 		+partners(d.partners)
-	//- 	+section()(class=s.section__about)
-	//- 		+about()(class=cx(s.section_inner, s.section_inner__start))
-	//- 		+review(d.review[0])(class=cx(s.section_inner, s.section_inner__end))
+		+section()(class=s.section__overview)
+			div(class=s.section_inner)
+				+overview()
+			each i, idx in Array(2)
+				+icon('assetIconVirus')(
+					class=cx(s.section_virus, s[`section_virus${idx}`]))
 	//- 	+section()(class=s.section__projects)
 	//- 		+projects(d.projects.list)(class=s.section_inner)
 	//- 	+section()(class=s.section__features)

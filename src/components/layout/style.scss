@@ -1,12 +1,10 @@
 @use 'config' as *;
 
 .layout {
-	$root: &;
+	overflow-x: hidden;
 
 	&_header {
 		@include container();
-
-		border: 1px solid #000;
 	}
 
 	&_main {

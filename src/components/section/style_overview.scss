@@ -1,0 +1,47 @@
+@use 'data' as d;
+@use 'config' as *;
+
+$root: null !default;
+
+#{$root}__overview {
+	position: relative;
+	padding-block-start: t2c(100, xxl);
+	padding-block-end: t2c(178, xxl);
+
+	@include breakpoint(s) {
+		background-position: left 10% top;
+		background-repeat: no-repeat;
+		background-image: url(#{image-path(map-deep($asset, 'image', 'overview'))});
+		background-size: t2c(650, xxl);
+	}
+
+	#{$root}_inner {
+		display: grid;
+		grid-template-columns: repeat($grid_columns, 1fr);
+		column-gap: em($spacing_gutter);
+
+		@include container();
+
+		> * {
+			grid-column: #{$grid_full};
+
+			@include breakpoint(s) {
+				grid-column: span 10 / -1;
+			}
+
+			@include breakpoint(m) {
+				grid-column: span 7 / -1;
+			}
+		}
+	}
+	#{$root}_virus {
+		height: auto;
+		opacity: 0.5;
+
+		@include breakpoint(s) {
+			opacity: 1;
+		}
+
+		@include figure(d.$figures_overview, 680);
+	}
+}

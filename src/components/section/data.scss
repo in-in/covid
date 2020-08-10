@@ -28,3 +28,30 @@ $figures_hero: (
 		'fill': color.scale($color_base_carnation, $alpha: -18%),
 	),
 );
+
+$figures_overview: (
+	'0': (
+		'bottom': 0,
+		'right': 60,
+		'width': 132,
+		'transform': translateY(50%),
+		'fill': color.scale(
+			$color_base_carnation,
+			$alpha: -20%,
+			$lightness: 40%,
+			$saturation: 28%,
+		),
+	),
+	'1': (
+		'bottom': 66,
+		'right': 0,
+		'width': 284,
+		'transform': translateX(50%),
+		'fill': color.scale(
+			$color_base_carnation,
+			$alpha: -25%,
+			$lightness: 40%,
+			$saturation: 28%,
+		),
+	),
+);
