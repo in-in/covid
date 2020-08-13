@@ -2,4 +2,4 @@ mixin text(text, ...modifier)
 	p(
 		class=cx(s.text, modifier.map(mod => s[`text__${mod}`]))
 		)&attributes(attributes)
-		= text
+		!= text

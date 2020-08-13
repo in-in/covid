@@ -3,4 +3,4 @@ mixin heading(prop, ...modifier)
 	#{tag}(
 		class=cx(s.heading, modifier.map(mod => s[`heading__${mod}`]))
 		)&attributes(attributes)
-		= text
+		!= text
