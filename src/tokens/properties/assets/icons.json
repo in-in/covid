@@ -7,6 +7,15 @@
 			"virus": {
 				"value": "virus.svg"
 			},
+			"contagion1": {
+				"value": "contagion1.svg"
+			},
+			"contagion2": {
+				"value": "contagion2.svg"
+			},
+			"contagion3": {
+				"value": "contagion3.svg"
+			},
 			"social1": {
 				"value": "social_facebook.svg"
 			},

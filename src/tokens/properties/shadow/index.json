@@ -1,10 +1,7 @@
 {
 	"shadow": {
-		"review": {
-			"value": "50px 50px 100px"
-		},
-		"avatar": {
-			"value": "20px 25px 40px"
+		"base": {
+			"value": "0 35px 85px"
 		}
 	}
 }

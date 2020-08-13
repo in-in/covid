@@ -1,0 +1,37 @@
+@use 'config' as *;
+
+.contagion {
+	$root: &;
+
+	display: grid;
+	grid-template-columns: inherit;
+	column-gap: inherit;
+	text-align: center;
+
+	&_header {
+		grid-row: 1;
+		grid-column: #{$grid_full};
+		margin-block-end: em(100);
+
+		> :not(:last-child):not(#{$root}_subheading) {
+			margin-block-end: em($spacing_80);
+		}
+
+		@include breakpoint(s) {
+			grid-column: 3 / -3;
+		}
+
+		@include breakpoint(m) {
+			grid-column: 6 / -6;
+		}
+	}
+
+	&_list {
+		grid-row: 2;
+		grid-column: #{$grid_full};
+	}
+
+	&_subheading {
+		margin-block-end: em($spacing_40);
+	}
+}

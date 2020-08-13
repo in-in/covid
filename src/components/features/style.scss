@@ -1,55 +1,37 @@
 @use 'config' as *;
 
 .features {
-	&_header {
-		grid-row: 1 / span 1;
-		grid-column: #{$grid_full};
-
-		@include breakpoint(s) {
-			grid-column: 1 / span 4;
-		}
-	}
-
 	&_list {
-		--row: 3;
-
 		display: grid;
-		grid-template-rows: repeat(var(--row), 1fr);
-		grid-template-columns: repeat(4, 1fr);
-		grid-row: 2 / span var(--row);
-		grid-column: #{$grid_full};
-		gap: inherit;
-		overflow-x: auto;
-		overflow-y: hidden;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: em($spacing_gutter * 2);
 	}
 }
 
 .feature {
-	grid-row: 1 / span 3;
-	min-width: em(168);
-	padding: em($spacing_100);
+	$context: 448;
 
-	> *:not(:last-child) {
-		margin-bottom: em($spacing_100);
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block-start: t2c(50, $context, p);
+	padding-block-end: t2c(72, $context, p);
+	padding-inline-start: t2c(50, $context, p);
+	padding-inline-end: t2c(50, $context, p);
+	border-radius: em($size_border_width_normal);
+	background-color: $color_base_white;
+	box-shadow: compose-shadow($shadow_base);
+
+	&_image {
+		width: t2c(280, $context, p);
+		height: auto;
+		margin-block-end: t2c(50, $context, p);
 	}
 
 	&_heading {
-		text-transform: uppercase;
+		margin-block-end: em(16);
 
 		@include truncate_text();
-	}
-
-	&_excerpt {
-		@include truncate_multiline_text(
-			$breakpoint: 7,
-			$min-height: true,
-			$color-bg: $color_base_husky);
-
-		@include breakpoint(l) {
-			@include truncate_multiline_text(
-				$breakpoint: 5,
-				$min-height: true,
-				$color-bg: $color_base_husky);
-		}
 	}
 }

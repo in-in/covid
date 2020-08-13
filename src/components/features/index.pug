@@ -1,18 +1,15 @@
 include ../heading/index.pug
-include ../link/index.pug
 include ../text/index.pug
 
 mixin feature(data)
-	- let {excerpt, link, title} = data;
+	- let {description, image, title} = data;
 	li(class=s.feature)&attributes(attributes)
+		+icon(image)(class=s.feature_image)
 		+heading({text: title, tag: 'h3', modifier: 'h4'})(class=s.feature_heading)
-		+text(excerpt)(class=s.feature_excerpt)
-		+link({str: 'Read more', href: link})
+		+text(description)
 
 mixin features(list)
 	div(class=s.features)&attributes(attributes)
-		header(class=s.features_header)
-			+heading({text: d.features.heading, tag: 'h2', modifier: 'h3'})
 		ul(class=s.features_list)
 			each item in list
 				+feature(item)(class=s.features_item)

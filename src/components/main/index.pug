@@ -1,12 +1,7 @@
-include ../aside/index.pug
-include ../button/index.pug
-include ../features/index.pug
+include ../contagion/index.pug
 include ../hero/index.pug
 include ../icon/index.pug
 include ../overview/index.pug
-include ../partners/index.pug
-include ../projects/index.pug
-include ../review/index.pug
 include ../section/index.pug
 
 mixin main()
@@ -23,7 +18,7 @@ mixin main()
 			each i, idx in Array(2)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
-	//- 	+section()(class=s.section__projects)
-	//- 		+projects(d.projects.list)(class=s.section_inner)
-	//- 	+section()(class=s.section__features)
-	//- 		+features(d.features.list)(class=cx(s.section_inner))
+		+section()(class=s.section__contagion)
+			div(class=s.section_inner)
+				+contagion()
+				+icon('assetIconVirus')(class=cx(s.section_virus, s.section_virus0))

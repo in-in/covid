@@ -13,6 +13,9 @@
 			"white": {
 				"value": "#fff"
 			},
+			"black": {
+				"value": "#000"
+			},
 			"crystal": {
 				"value": "rgba(255, 255, 255, 0)"
 			}

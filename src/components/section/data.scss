@@ -55,3 +55,17 @@ $figures_overview: (
 		),
 	),
 );
+
+$figures_contagion: (
+	'0': (
+		'bottom': 110,
+		'left': 100,
+		'width': 254,
+		'fill': color.scale(
+			$color_base_carnation,
+			$alpha: -50%,
+			$lightness: 40%,
+			$saturation: 28%,
+		),
+	),
+);

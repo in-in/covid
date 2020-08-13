@@ -18,14 +18,36 @@
 		}
 	],
 	"hero": {
-		"heading": "Stay At Home Quarantine To Stop Corona Virus",
+		"heading": "Stay At&nbsp;Home Quarantine To&nbsp;Stop Corona Virus",
 		"subheading": "COVID-19 Alert",
-		"description": "There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to"
+		"description": "There is&nbsp;no&nbsp;specific medicine to&nbsp;prevent or&nbsp;treat coronavirus disease (COVID-19). People may need supportive care&nbsp;to"
 	},
 	"overview": {
 		"heading": "Coronavirus",
 		"subheading": "What Is Covid-19",
-		"description": "Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory illness now called COVID-19.Lauren Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event Preparedness and Response"
+		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused a&nbsp;recent outbreak of&nbsp;respiratory illness now called COVID-19. Lauren Sauer, M.S., the director of&nbsp;operations with the Johns Hopkins Office of&nbsp;Critical Event Preparedness and Response"
+	},
+	"contagion": {
+		"heading": "Contagion",
+		"subheading": "Covid-19",
+		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type",
+		"list": [
+			{
+				"title": "Air Transmission",
+				"description": "Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify",
+				"image": "assetIconContagion1"
+			},
+			{
+				"title": "Human Contacts",
+				"description": "Washing your hands is&nbsp;one of&nbsp;the simplest ways you can protect",
+				"image": "assetIconContagion2"
+			},
+			{
+				"title": "Containted Objects",
+				"description": "Use the tissue while sneezing, In&nbsp;this way, you can protect your droplets",
+				"image": "assetIconContagion3"
+			}
+		]
 	},
 	"review": [
 		{
@@ -107,31 +129,6 @@
 				"description": "The app allows you to monitor and control the VFD without opening the physical enclosures, which greatly improves safety during maintenance",
 				"link": "#",
 				"image": "assetIconProject3"
-			}
-		]
-	},
-	"features": {
-		"heading": "Solving complex needs for digital products",
-		"list": [
-			{
-				"title": "Creative",
-				"excerpt": "Search for new and innovative communication solutions at the intersection of technology and design",
-				"link": "#"
-			},
-			{
-				"title": "Strategy",
-				"excerpt": "Systemic and integrated approach to communicating with the consumer in an interactive media environment",
-				"link": "#"
-			},
-			{
-				"title": "Production",
-				"excerpt": "Search for new talents and attract ideas so that the brand is always satisfied",
-				"link": "#"
-			},
-			{
-				"title": "Service",
-				"excerpt": "Serve your entire company by creating customized enterprise application platforms that focus on customers and employees that integrate your systems and processes",
-				"link": "#"
 			}
 		]
 	},

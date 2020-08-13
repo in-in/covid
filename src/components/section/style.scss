@@ -3,8 +3,7 @@ $section: '.section';
 @use 'config' as *;
 @use 'style_hero' with ($section: $section);
 @use 'style_overview' with ($section: $section);
-// @use 'style_projects' with ($section: $section);
-// @use 'style_features' with ($section: $section);
+@use 'style_contagion' with ($section: $section);
 
 #{$section} {
 	// grid-column: #{$grid_full};
