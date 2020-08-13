@@ -2,11 +2,11 @@
 
 .overview {
 	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
-	& > *:not(:last-child):not(&_subheading) {
+	& > :not(:last-child):not(&_subheading) {
 		margin-block-end: em($spacing_80);
 	}
-
 	/* stylelint-enable */
+
 	&_subheading {
 		margin-block-end: em($spacing_40);
 	}
