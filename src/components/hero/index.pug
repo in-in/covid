@@ -1,11 +1,18 @@
 include ../button/index.pug
-include ../heading/index.pug
-include ../subheading/index.pug
+include ../headingDouble/index.pug
 include ../text/index.pug
 
 mixin hero()
 	div(class=s.hero)&attributes(attributes)
-		+subheading(d.hero.subheading, 'big')(class=s.hero_subheading)
-		+heading({text: d.hero.heading, tag: 'h1'}, 'h1')
-		+text(d.hero.description, 'big')
+		+headingDouble(
+			{
+				text: d.hero.subheading,
+				mod: ['big'],
+			},
+			{
+				text: d.hero.heading,
+				tag: 'h1',
+				mod: ['h1'],
+			})
+		+text(d.hero.description, 'big')(class=s.hero_description)
 		+button('Let Us Help', 'primary', 'big')

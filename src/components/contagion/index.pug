@@ -1,12 +1,12 @@
 include ../features/index.pug
-include ../heading/index.pug
-include ../subheading/index.pug
+include ../headingDouble/index.pug
 include ../text/index.pug
 
 mixin contagion()
 	div(class=s.contagion)&attributes(attributes)
 		header(class=s.contagion_header)
-			+subheading(d.contagion.subheading)(class=s.contagion_subheading)
-			+heading({text: d.contagion.heading, tag: 'h2'}, 'h2')
+			+headingDouble(
+				{text: d.contagion.subheading},
+				{text: d.contagion.heading})
 			+text(d.contagion.description)
 		+features(d.contagion.list)(class=s.contagion_list)

@@ -1,11 +1,11 @@
 include ../button/index.pug
-include ../heading/index.pug
-include ../subheading/index.pug
+include ../headingDouble/index.pug
 include ../text/index.pug
 
 mixin overview()
 	div(class=s.overview)&attributes(attributes)
-		+subheading(d.overview.subheading)(class=s.overview_subheading)
-		+heading({text: d.overview.heading, tag: 'h2'}, 'h2')
-		+text(d.overview.description)
+		+headingDouble(
+			{text: d.overview.subheading},
+			{text: d.overview.heading})
+		+text(d.overview.description)(class=s.overview_description)
 		+button('Learn More', 'primary')

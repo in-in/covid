@@ -1,0 +1,11 @@
+@use 'config' as *;
+
+.headingDouble {
+	&_top {
+		margin-block-end: em($spacing_40);
+	}
+
+	&_bottom {
+		margin-block-end: em($spacing_80);
+	}
+}

@@ -1,0 +1,12 @@
+include ../heading/index.pug
+include ../subheading/index.pug
+
+mixin headingDouble(subheading, heading)
+	- let {text: stext, mod: smod = []} = subheading;
+	- let {text: htext, tag = 'h2', mod: hmod = ['h2']} = heading;
+
+	+subheading(stext, ...smod)(class=s.headingDouble_top
+		role='doc-subtitle')
+	+heading({
+		text: htext,
+		tag: tag}, ...hmod)(class=s.headingDouble_bottom)

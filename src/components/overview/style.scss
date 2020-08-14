@@ -1,13 +1,7 @@
 @use 'config' as *;
 
 .overview {
-	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
-	& > :not(:last-child):not(&_subheading) {
+	&_description {
 		margin-block-end: em($spacing_80);
-	}
-	/* stylelint-enable */
-
-	&_subheading {
-		margin-block-end: em($spacing_40);
 	}
 }
