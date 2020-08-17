@@ -49,6 +49,11 @@
 			}
 		]
 	},
+	"symptoms": {
+		"heading": "Symptoms",
+		"subheading": "Covid-19",
+		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused a&nbsp;recent outbreak of&nbsp;respiratory"
+	},
 	"review": [
 		{
 			"quote": "They try to make sure that they completely understand what we want, and clients should take full advantage of it",
@@ -251,8 +256,5 @@
 			"url": "https://www.instagram.com",
 			"icon": "assetIconSocial2"
 		}
-	],
-	"slogan": {
-		"text": "Improve and grow for digital products"
-	}
+	]
 }

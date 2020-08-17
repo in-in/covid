@@ -1,0 +1,99 @@
+@use 'sass:map';
+@use 'data' as d;
+@use 'config' as *;
+
+.symptoms {
+	$root: &;
+
+	display: grid;
+	grid-template-columns: inherit;
+	column-gap: inherit;
+	text-align: center;
+
+	&_header {
+		grid-row: 1;
+		grid-column: #{$grid_full};
+		margin-block-end: em(50);
+
+		@include breakpoint(s) {
+			grid-column: 3 / -3;
+		}
+
+		@include breakpoint(m) {
+			grid-column: 5 / -5;
+		}
+	}
+
+	&_figure {
+		grid-row: 2;
+		grid-column: 2 / -2;
+	}
+
+	&_image {
+		width: 100%;
+		height: auto;
+	}
+
+	&_item {
+		@each $index, $item in d.$symptoms {
+			&:nth-of-type(#{$index}) {
+				#{$root}_marker {
+					offset-path: path(map.get($item, path));
+				}
+
+				/* stylelint-disable max-nesting-depth */
+				@keyframes curve#{$index} {
+					to {
+						stroke-dashoffset: map.get($item, curve);
+					}
+				}
+				/* stylelint-enable */
+
+				@include hover() {
+					#{$root}_curve {
+						animation-name: curve#{$index};
+					}
+					#{$root}_marker {
+						animation-direction: map.get($item, move);
+					}
+				}
+			}
+		}
+
+		@include hover() {
+			#{$root}_name {
+				stroke: $color_base_carnation;
+				stroke-width: 2px;
+			}
+
+			#{$root}_marker {
+				animation-name: move;
+				animation-duration: 2s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				fill: $color_base_carnation;
+				stroke: $color_base_jungle_green;
+				stroke-width: 1;
+				r: 10;
+			}
+
+			#{$root}_point {
+				display: none;
+			}
+
+			#{$root}_curve {
+				animation-duration: 6s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				stroke: $color_base_carnation;
+				stroke-dasharray: 20;
+			}
+		}
+	}
+
+	@keyframes move {
+		to {
+			offset-distance: 100%;
+		}
+	}
+}

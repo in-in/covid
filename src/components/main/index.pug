@@ -3,6 +3,7 @@ include ../hero/index.pug
 include ../icon/index.pug
 include ../overview/index.pug
 include ../section/index.pug
+include ../symptoms/index.pug
 
 mixin main()
 	main(class=s.main)&attributes(attributes)
@@ -22,3 +23,6 @@ mixin main()
 			div(class=s.section_inner)
 				+contagion()
 				+icon('assetIconVirus')(class=cx(s.section_virus, s.section_virus0))
+		+section()(class=s.section__symptoms)
+			div(class=s.section_inner)
+				+symptoms()

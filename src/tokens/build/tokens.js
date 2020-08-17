@@ -6,6 +6,7 @@ export const assetIconVirus = "virus.svg";
 export const assetIconContagion1 = "contagion1.svg";
 export const assetIconContagion2 = "contagion2.svg";
 export const assetIconContagion3 = "contagion3.svg";
+export const assetIconSymptoms = "symptoms.svg";
 export const assetIconSocial1 = "social_facebook.svg";
 export const assetIconSocial2 = "social_instagram.svg";
 export const assetIconSocial3 = "social_linkedin.svg";
