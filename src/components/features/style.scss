@@ -11,10 +11,12 @@
 .feature {
 	$context: 448;
 
+	position: relative;
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
 	padding-block-start: t2c(50, $context, p);
 	padding-block-end: t2c(72, $context, p);
 	padding-inline-start: t2c(50, $context, p);
@@ -22,6 +24,23 @@
 	border-radius: em($size_border_width_normal);
 	background-color: $color_base_white;
 	box-shadow: compose-shadow($shadow_base);
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: em(6);
+		background-color: $color_base_crystal;
+
+		@include transition();
+	}
+
+	@include hover() {
+		&::after {
+			background-color: $color_base_carnation;
+		}
+	}
 
 	&_image {
 		width: t2c(280, $context, p);
