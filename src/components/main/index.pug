@@ -26,3 +26,6 @@ mixin main()
 		+section()(class=s.section__symptoms)
 			div(class=s.section_inner)
 				+symptoms()
+			each i, idx in Array(2)
+				+icon(`assetIconCloud${idx}`)(
+					class=cx(s.section_cloud, s[`section_cloud${idx}`]))

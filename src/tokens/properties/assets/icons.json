@@ -19,6 +19,12 @@
 			"symptoms": {
 				"value": "symptoms.svg"
 			},
+			"cloud0": {
+				"value": "cloud0.svg"
+			},
+			"cloud1": {
+				"value": "cloud1.svg"
+			},
 			"social1": {
 				"value": "social_facebook.svg"
 			},
