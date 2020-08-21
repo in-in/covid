@@ -82,3 +82,35 @@ $figures_symptoms: (
 		'width': 220,
 	),
 );
+
+$figures_prevention: (
+	'0': (
+		'top': 662,
+		'left': 0,
+		'transform': translateX(-50%),
+		'width': 277,
+		'fill': color.adjust(
+			$color_base_jungle_green,
+			$lightness: 15%,
+			$hue: -24,
+			$saturation: -15%,
+		)
+	),
+	'1': (
+		'bottom': 485,
+		'right': 32,
+		'width': 128,
+		'fill': color.adjust(
+			$color_base_jungle_green,
+			$lightness: 15%,
+			$hue: -24,
+			$saturation: -15%,
+		)
+	),
+	'2': (
+		'bottom': 145,
+		'right': 0,
+		'width': 315,
+		'transform': translateX(50%)
+	),
+);

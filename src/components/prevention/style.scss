@@ -1,0 +1,27 @@
+@use 'config' as *;
+
+.prevention {
+	display: grid;
+	grid-template-columns: inherit;
+	column-gap: inherit;
+	text-align: center;
+
+	&_header {
+		grid-row: 1;
+		grid-column: #{$grid_full};
+		margin-block-end: em(50);
+
+		@include breakpoint(s) {
+			grid-column: 3 / -3;
+		}
+
+		@include breakpoint(m) {
+			grid-column: 5 / -5;
+		}
+	}
+
+	&_list {
+		grid-row: 2;
+		grid-column: #{$grid_full};
+	}
+}

@@ -1,0 +1,29 @@
+@use 'data' as d;
+@use 'config' as *;
+
+$section: null !default;
+
+#{$section}__prevention {
+	position: relative;
+	padding-block-start: t2c(50, end);
+	padding-block-end: t2c(90, end);
+
+	#{$section}_inner {
+		display: grid;
+		grid-template-columns: repeat($grid_columns, 1fr);
+		column-gap: em($spacing_gutter);
+
+		@include container();
+
+		> * {
+			grid-column: #{$grid_full};
+		}
+	}
+
+	#{$section}_virus {
+		height: auto;
+		opacity: 0.5;
+
+		@include figure(d.$figures_prevention, 680);
+	}
+}

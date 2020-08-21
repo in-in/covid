@@ -1,0 +1,13 @@
+include ../headingDouble/index.pug
+include ../icon/index.pug
+include ../text/index.pug
+
+mixin prevention()
+	div(class=s.prevention)&attributes(attributes)
+		header(class=s.prevention_header)
+			+headingDouble(
+				{text: d.prevention.subheading},
+				{text: d.prevention.heading})
+			+text(d.prevention.description)
+		div(class=s.prevention_list)
+			p prevention_list
