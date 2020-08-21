@@ -12,7 +12,7 @@
 		width: em($size_social_icon);
 		height: em($size_social_icon);
 		border-radius: $size_border_radius_circle;
-		background-color: $color_base_husky;
+		background-color: #ccc;
 
 		&:not(:last-child) {
 			margin-inline-end: em($spacing_60);
@@ -23,14 +23,14 @@
 		padding: em($spacing_80);
 
 		@include hover($selector: #{$root}_icon) {
-			fill: $color_base_schnipo;
+			// fill: $color_base_carnation;
 		}
 	}
 
 	&_icon {
 		width: 100%;
 		height: auto;
-		fill: $color_base_forest;
+		// fill: $color_base_jungle_green;
 
 		@include transition(fill);
 	}

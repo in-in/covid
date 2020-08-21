@@ -10,11 +10,11 @@
 	line-height: $size_line_height_normal;
 
 	&__light {
-		color: color.scale($color_base_schnipo, $lightness: -38%);
+		color: $color_base_carnation;
 	}
 
 	&__dark {
-		color: color.scale($color_base_schnipo, $lightness: 20%);
+		color: $color_base_carnation;
 	}
 
 	&_text {
