@@ -1,3 +1,4 @@
+include ../heading/index.pug
 include ../headingDouble/index.pug
 include ../icon/index.pug
 include ../text/index.pug
@@ -9,5 +10,13 @@ mixin prevention()
 				{text: d.prevention.subheading},
 				{text: d.prevention.heading})
 			+text(d.prevention.description)
-		div(class=s.prevention_list)
-			p prevention_list
+		ul(class=s.prevention_list)
+			each item in d.prevention.list
+				- let {title, description, image} = item
+				li(class=s.prevention_item)
+					div(class=s.prevention_itemContent)
+						+heading({text: title, tag: 'h3'}, 'h3')(
+							class=s.prevention_itemTitle)
+						+text(description)(
+							class=s.prevention_itemDesc)
+					+icon(image)(class=s.prevention_itemImg)

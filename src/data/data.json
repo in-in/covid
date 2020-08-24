@@ -57,7 +57,29 @@
 	"prevention": {
 		"heading": "What should we&nbsp;do",
 		"subheading": "Covid-19",
-		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused"
+		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused",
+		"list": [
+			{
+				"title": "Wear Masks",
+				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking",
+				"image": "assetIconPrevention1"
+			},
+			{
+				"title": "Wash Your Hands",
+				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking. Objectively Continually seize impactful vortals",
+				"image": "assetIconPrevention2"
+			},
+			{
+				"title": "Use Nose&nbsp;&mdash; Rag",
+				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking. Objectively",
+				"image": "assetIconPrevention3"
+			},
+			{
+				"title": "Avoid Contacts",
+				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic",
+				"image": "assetIconPrevention4"
+			}
+		]
 	},
 	"social": [
 		{

@@ -6,7 +6,7 @@ $section: null !default;
 #{$section}__prevention {
 	position: relative;
 	padding-block-start: t2c(50, end);
-	padding-block-end: t2c(90, end);
+	padding-block-end: t2c(50, end);
 
 	#{$section}_inner {
 		display: grid;
@@ -22,8 +22,8 @@ $section: null !default;
 
 	#{$section}_virus {
 		height: auto;
-		opacity: 0.5;
+		opacity: 0.3;
 
-		@include figure(d.$figures_prevention, 680);
+		@include figure(d.$figures_prevention, 2278);
 	}
 }

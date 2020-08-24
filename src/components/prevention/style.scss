@@ -1,15 +1,18 @@
+@use 'sass:color';
 @use 'config' as *;
 
-.prevention {
+$prevention: '.prevention';
+
+#{$prevention} {
 	display: grid;
 	grid-template-columns: inherit;
 	column-gap: inherit;
-	text-align: center;
 
 	&_header {
 		grid-row: 1;
 		grid-column: #{$grid_full};
 		margin-block-end: em(50);
+		text-align: center;
 
 		@include breakpoint(s) {
 			grid-column: 3 / -3;
@@ -23,5 +26,89 @@
 	&_list {
 		grid-row: 2;
 		grid-column: #{$grid_full};
+		column-gap: inherit;
+		counter-reset: prevention;
+	}
+
+	&_item {
+		display: grid;
+		gap: em($spacing_gutter);
+		counter-increment: prevention;
+
+		@include breakpoint(s) {
+			grid-template-columns: repeat($grid_columns, 1fr);
+			align-items: center;
+		}
+
+		&Content {
+			display: grid;
+			grid-row: 1;
+			gap: em($spacing_gutter);
+
+			/* stylelint-disable-next-line a11y/content-property-no-static-value */
+			&::before {
+				--size: #{em(56, $size_font_max * $size_font_ms_u_3)};
+
+				content: '0' counter(prevention);
+				display: flex;
+				grid-column: 1;
+				flex-shrink: 0;
+				justify-content: center;
+				align-items: center;
+				width: var(--size);
+				height: var(--size);
+				border-radius: $size_border_radius_circle;
+				background-color: color.scale($color_base_carnation, $alpha: -80%);
+				color: $color_base_carnation;
+				font-family: $typography_family_secondary;
+				font-size: $size_font_ms_u_3 + em;
+				font-weight: $typography_weight_bold;
+			}
+
+			@include breakpoint(s) {
+				grid-template-columns: repeat($grid_columns / 2, 1fr);
+			}
+		}
+
+		&Title,
+		&Desc {
+			grid-column: 2 / -1;
+			align-self: center;
+		}
+
+		&Img {
+			z-index: 10;
+			width: t2c(224, xs, p);
+			height: auto;
+			margin: auto;
+
+			@include breakpoint(s) {
+				width: 90%;
+			}
+		}
+
+		&:nth-child(odd) {
+			@include breakpoint(s) {
+				#{$prevention}_itemContent {
+					grid-column: 1 / span 8;
+				}
+
+				#{$prevention}_itemImg {
+					grid-column: span 6 / -1;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			@include breakpoint(s) {
+				#{$prevention}_itemContent {
+					grid-column: span 8 / -1;
+				}
+
+				#{$prevention}_itemImg {
+					grid-column: 1 / span 6;
+				}
+			}
+		}
 	}
 }
