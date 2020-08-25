@@ -6,7 +6,7 @@ mixin feature(data)
 	- let {description, image, title} = data;
 	li(class=s.feature)&attributes(attributes)
 		+icon(image)(class=s.feature_image)
-		+heading({text: title, tag: 'h3', modifier: 'h4'})(class=s.feature_heading)
+		+heading({text: title, tag: 'h3'}, 'h4')(class=s.feature_heading)
 		+text(description)
 
 mixin features(list)
