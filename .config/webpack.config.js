@@ -5,7 +5,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const classnames = require('classnames');
 const { PATHS, PAGES } = require('./paths');
 
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.NODE_ENV !== 'prod';
 
 global.icons = path.join(PATHS.src, PATHS.icons);
 global.cx = classnames;

@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { PATHS } = require('./paths');
 
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.NODE_ENV !== 'prod';
 
 const saveJSON = (fileName, json) => {
 	if (fileName.includes('inline.scss')) {
@@ -11,7 +11,7 @@ const saveJSON = (fileName, json) => {
 	const { name } = path.parse(fileName);
 	const jsonFileName = path.resolve(
 		PATHS.styles,
-		isDev ? `${name}.development.json` : `${name}.production.json`,
+		isDev ? `${name}.dev.json` : `${name}.prod.json`,
 	);
 	fs.writeFileSync(jsonFileName, JSON.stringify(json));
 };

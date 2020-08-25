@@ -2,10 +2,10 @@
 	"name": "Covid-19",
 	"private": true,
 	"scripts": {
-		"build": "NODE_ENV=production webpack --config .config/webpack.prod.js",
-		"dev": "NODE_ENV=development webpack --config .config/webpack.dev.js",
+		"build": "NODE_ENV=prod webpack --config .config/webpack.prod.js",
+		"dev": "NODE_ENV=dev webpack --config .config/webpack.dev.js",
 		"gen": "plop --plopfile .config/plopfile.js",
-		"start": "NODE_ENV=development webpack-dev-server --config .config/webpack.dev.js",
+		"start": "NODE_ENV=dev webpack-dev-server --config .config/webpack.dev.js",
 		"tokens": "node ./.config/sd-build.js"
 	},
 	"browserslist": [
