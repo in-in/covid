@@ -2,4 +2,4 @@ mixin subheading(text, ...modifier)
 	span(
 		class=cx(s.subheading, modifier.map(mod => s[`subheading__${mod}`]))
 		)&attributes(attributes)
-		= text
+		!= text
