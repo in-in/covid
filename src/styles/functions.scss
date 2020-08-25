@@ -16,20 +16,22 @@
 	@return string.slice(#{$classname}, 2);
 }
 
-@function t2c($target, $context, $unit: vw) {
-	$result: null;
-
-	@if meta.type-of($context) == number {
-		$result: calc((#{$target} / #{$context}) * 100);
+@function breakpoint-context($val) {
+	@if meta.type-of($val) == number {
+		@return $val;
 	}
 
-	@else if map.has-key($breakpoint, $context) {
-		$result: calc((#{$target} / #{map.get($breakpoint, $context)}) * 100);
+	@else if map.has-key($breakpoint, $val) {
+		@return map.get($breakpoint, $val);
 	}
 
 	@else {
-		@error 'Unknown context argument <#{$context}>';
+		@error 'Unknown argument <#{$val}>';
 	}
+}
+
+@function t2c($target, $context, $unit: vw) {
+	$result: calc((#{$target} / #{breakpoint-context($context)}) * 100);
 
 	@if $unit == p {
 		@return (calc(#{$result} * 1%));
@@ -93,10 +95,12 @@
 	$viewport_min: to-number(map.get($breakpoint, start)),
 	$viewport_max: to-number(map.get($breakpoint, end)),
 ) {
+	$vmin: to-number(breakpoint-context($viewport_min));
+	$vmax: to-number(breakpoint-context($viewport_max));
 	$size_increase: ($size_max - $size_min);
-	$viewport_increase: ($viewport_max - $viewport_min);
+	$viewport_increase: ($vmax - $vmin);
 	$slope: ($size_increase) / ($viewport_increase);
-	$initial_size: ($size_min - $slope * $viewport_min) / $size_font_base;
+	$initial_size: ($size_min - $slope * $vmin) / $size_font_base;
 
 	@return calc(#{$slope * 100}vw + #{$initial_size}rem);
 }
