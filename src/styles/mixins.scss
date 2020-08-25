@@ -118,7 +118,7 @@
 
 @mixin container() {
 	width: 100%;
-	max-width: $grid_max_width + px;
+	max-width: em($grid_max_width);
 	margin-inline-start: auto;
 	margin-inline-end: auto;
 	padding-inline-start: em($spacing_gutter);

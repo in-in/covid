@@ -10,7 +10,7 @@
 			"value": "120"
 		},
 		"max-width": {
-			"value": "1440"
+			"value": "{breakpoint.xl.value}"
 		},
 		"columns": {
 			"value": "16"
