@@ -6,7 +6,7 @@ mixin contagion()
 	div(class=s.contagion)&attributes(attributes)
 		header(class=s.contagion_header)
 			+headingDouble(
-				{text: d.contagion.subheading},
-				{text: d.contagion.heading})
+				{text: d.contagion.heading},
+				{text: d.contagion.subheading})
 			+text(d.contagion.description)
 		+features(d.contagion.list)(class=s.contagion_list)

@@ -6,8 +6,8 @@ mixin symptoms()
 	div(class=s.symptoms)&attributes(attributes)
 		header(class=s.symptoms_header)
 			+headingDouble(
-				{text: d.symptoms.subheading},
-				{text: d.symptoms.heading})
+				{text: d.symptoms.heading},
+				{text: d.symptoms.subheading})
 			+text(d.symptoms.description)
 		figure(class=s.symptoms_figure)
 			+icon('assetIconSymptoms')(class=s.symptoms_image)

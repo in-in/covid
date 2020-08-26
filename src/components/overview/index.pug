@@ -5,7 +5,7 @@ include ../text/index.pug
 mixin overview()
 	div(class=s.overview)&attributes(attributes)
 		+headingDouble(
-			{text: d.overview.subheading},
-			{text: d.overview.heading})
+			{text: d.overview.heading},
+			{text: d.overview.subheading})
 		+text(d.overview.description)(class=s.overview_description)
 		+button('Learn More', 'primary')

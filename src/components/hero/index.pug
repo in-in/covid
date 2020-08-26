@@ -6,13 +6,13 @@ mixin hero()
 	div(class=s.hero)&attributes(attributes)
 		+headingDouble(
 			{
-				text: d.hero.subheading,
-				mod: ['big'],
-			},
-			{
 				text: d.hero.heading,
 				tag: 'h1',
 				mod: ['h1'],
+			},
+			{
+				text: d.hero.subheading,
+				mod: ['big'],
 			})
 		+text(d.hero.description, 'big')(class=s.hero_description)
 		+button('Let Us Help', 'primary', 'big')

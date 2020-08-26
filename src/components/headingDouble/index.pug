@@ -1,9 +1,9 @@
 include ../heading/index.pug
 include ../subheading/index.pug
 
-mixin headingDouble(subheading, heading)
-	- let {text: stext, mod: smod = []} = subheading;
+mixin headingDouble(heading, subheading)
 	- let {text: htext, tag = 'h2', mod: hmod = ['h2']} = heading;
+	- let {text: stext, mod: smod = []} = subheading;
 
 	+subheading(stext, ...smod)(class=s.headingDouble_top
 		role='doc-subtitle')

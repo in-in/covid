@@ -7,8 +7,8 @@ mixin prevention()
 	div(class=s.prevention)&attributes(attributes)
 		header(class=s.prevention_header)
 			+headingDouble(
-				{text: d.prevention.subheading},
-				{text: d.prevention.heading})
+				{text: d.prevention.heading},
+				{text: d.prevention.subheading})
 			+text(d.prevention.description)
 		ul(class=s.prevention_list)
 			each item in d.prevention.list
