@@ -35,7 +35,7 @@ const images = {
 };
 
 const fonts = {
-	'test': /\.(woff2)$/i,
+	'test': /\.(woff2|woff|ttf|otf)$/i,
 	'use': {
 		'loader': 'file-loader',
 		'options': {
