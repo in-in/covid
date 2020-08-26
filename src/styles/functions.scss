@@ -118,3 +118,9 @@
 	$color: color.scale($color_base_black, $alpha: -90%)) {
 	@return $value $color;
 }
+
+@function name-parse($name, $num: 1) {
+	$idx: string.index($name, '.');
+
+	@return string.insert($name, '@#{$num}x', $idx);
+}

@@ -125,13 +125,23 @@
 	padding-inline-end: em($spacing_gutter);
 }
 
-@mixin bg_resolution($data) {
-	@each $num, $src in $data {
+/* stylelint-disable function-url-quotes */
+@mixin bg_resolution($name) {
+	$resolutions: 1, 2;
+
+	@each $num in $resolutions {
 		@media (min-resolution: #{$num}x) {
-			background-image: url('#{$src}');
+			background-image:
+				url(
+					#{image-path(
+						name-parse(map-deep($asset, 'image', $name
+					), $num)
+				)}
+			);
 		}
 	}
 }
+/* stylelint-enable */
 
 @mixin triangle($size, $dir: 'right') {
 	&::before {
