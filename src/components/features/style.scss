@@ -38,7 +38,7 @@
 
 	@include hover() {
 		&::after {
-			background-color: $color_base_carnation;
+			background-color: $color_base_primary;
 		}
 	}
 

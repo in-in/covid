@@ -23,12 +23,12 @@
 	}
 
 	&__primary {
-		background-color: $color_base_carnation;
+		background-color: $color_base_primary;
 		color: $color_base_white;
 	}
 
 	&__plain {
-		border: em(1) solid $color_base_carnation;
-		color: $color_base_carnation;
+		border: em(1) solid $color_base_primary;
+		color: $color_base_primary;
 	}
 }

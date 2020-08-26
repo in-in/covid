@@ -63,7 +63,7 @@
 
 		@include hover() {
 			#{$root}_name {
-				stroke: $color_base_carnation;
+				stroke: $color_base_primary;
 				stroke-width: 2px;
 			}
 
@@ -72,8 +72,8 @@
 				animation-duration: 2s;
 				animation-timing-function: linear;
 				animation-iteration-count: infinite;
-				fill: $color_base_carnation;
-				stroke: $color_base_jungle_green;
+				fill: $color_base_primary;
+				stroke: $color_base_dark;
 				stroke-width: 1;
 				r: 10;
 			}
@@ -86,7 +86,7 @@
 				animation-duration: 6s;
 				animation-timing-function: linear;
 				animation-iteration-count: infinite;
-				stroke: $color_base_carnation;
+				stroke: $color_base_primary;
 				stroke-dasharray: 20;
 			}
 		}

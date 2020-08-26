@@ -55,7 +55,7 @@
 		position: relative;
 		display: block;
 		padding: em($spacing_60);
-		color: $color_base_jungle_green;
+		color: $color_base_dark;
 
 		&::after {
 			content: '';
@@ -76,10 +76,10 @@
 		@include transition(color);
 
 		@include hover() {
-			color: $color_base_carnation;
+			color: $color_base_primary;
 
 			&::after {
-				border-color: $color_base_carnation;
+				border-color: $color_base_primary;
 			}
 		}
 	}

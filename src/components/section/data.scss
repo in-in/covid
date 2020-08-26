@@ -6,26 +6,26 @@ $figures_hero: (
 		'top': 78,
 		'right': 868,
 		'width': 190,
-		'fill': color.scale($color_base_carnation, $alpha: -20%),
+		'fill': color.scale($color_base_primary, $alpha: -20%),
 	),
 	'1': (
 		'top': 214,
 		'right': 524,
 		'width': 123,
-		'fill': color.scale($color_base_carnation, $alpha: -28%),
+		'fill': color.scale($color_base_primary, $alpha: -28%),
 	),
 	'2': (
 		'top': 42,
 		'right': 8,
 		'width': 113,
-		'fill': color.scale($color_base_carnation, $alpha: -35%),
+		'fill': color.scale($color_base_primary, $alpha: -35%),
 	),
 	'3': (
 		'top': 327,
 		'right': 0,
 		'width': 255,
 		'transform': translateX(50%),
-		'fill': color.scale($color_base_carnation, $alpha: -18%),
+		'fill': color.scale($color_base_primary, $alpha: -18%),
 	),
 );
 
@@ -36,7 +36,7 @@ $figures_overview: (
 		'width': 132,
 		'transform': translateY(50%),
 		'fill': color.scale(
-			$color_base_carnation,
+			$color_base_primary,
 			$alpha: -20%,
 			$lightness: 40%,
 			$saturation: 28%,
@@ -48,7 +48,7 @@ $figures_overview: (
 		'width': 284,
 		'transform': translateX(50%),
 		'fill': color.scale(
-			$color_base_carnation,
+			$color_base_primary,
 			$alpha: -25%,
 			$lightness: 40%,
 			$saturation: 28%,
@@ -62,7 +62,7 @@ $figures_contagion: (
 		'left': 100,
 		'width': 254,
 		'fill': color.scale(
-			$color_base_carnation,
+			$color_base_primary,
 			$alpha: -50%,
 			$lightness: 40%,
 			$saturation: 28%,
@@ -90,7 +90,7 @@ $figures_prevention: (
 		'transform': translateX(-50%),
 		'width': 277,
 		'fill': color.adjust(
-			$color_base_jungle_green,
+			$color_base_dark,
 			$lightness: 15%,
 			$hue: -24,
 			$saturation: -15%,
@@ -101,7 +101,7 @@ $figures_prevention: (
 		'right': 32,
 		'width': 128,
 		'fill': color.adjust(
-			$color_base_jungle_green,
+			$color_base_dark,
 			$lightness: 15%,
 			$hue: -24,
 			$saturation: -15%,

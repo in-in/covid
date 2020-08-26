@@ -168,7 +168,7 @@
 	$bottom: true,
 	$gutter: false,
 	$inner: false,
-	$color: color.scale($color_base_jungle_green, $alpha: -90%)) {
+	$color: color.scale($color_base_dark, $alpha: -90%)) {
 	position: relative;
 
 	&::before,
@@ -203,7 +203,7 @@
 	}
 }
 
-@mixin figure($data, $container_height, $color: $color_base_carnation) {
+@mixin figure($data, $container_height, $color: $color_base_primary) {
 	position: absolute;
 	z-index: 0;
 

@@ -1,7 +1,7 @@
 @use 'config' as *;
 
 .heading {
-	color: $color_base_jungle_green;
+	color: $color_base_dark;
 	font-weight: $typography_weight_semi_bold;
 	line-height: calc(2px + #{$size_font_ms_u_5 + ex} + 2px);
 
