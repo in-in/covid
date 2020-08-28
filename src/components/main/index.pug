@@ -1,4 +1,5 @@
 include ../contagion/index.pug
+include ../heading/index.pug
 include ../hero/index.pug
 include ../icon/index.pug
 include ../overview/index.pug
@@ -14,25 +15,34 @@ mixin main()
 			each i, idx in Array(4)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
+
 		+section()(class=s.section__overview)
 			div(class=s.section_inner)
 				+overview()
 			each i, idx in Array(2)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
+
 		+section()(class=s.section__contagion)
 			div(class=s.section_inner)
 				+contagion()
 				+icon('assetIconVirus')(class=cx(s.section_virus, s.section_virus0))
+
 		+section()(class=s.section__symptoms)
 			div(class=s.section_inner)
 				+symptoms()
 			each i, idx in Array(2)
 				+icon(`assetIconCloud${idx}`)(
 					class=cx(s.section_cloud, s[`section_cloud${idx}`]))
+
 		+section()(class=s.section__prevention)
 			div(class=s.section_inner)
 				+prevention()
 			each i, idx in Array(3)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
+
+		+section()(class=s.section__reports)
+			div(class=s.section_inner)
+				+heading({text: d.reports.heading, tag: 'h2'})(class=s.section_heading)
+				p reports

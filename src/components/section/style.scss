@@ -6,6 +6,7 @@ $section: '.section';
 @use 'style_contagion' with ($section: $section);
 @use 'style_symptoms' with ($section: $section);
 @use 'style_prevention' with ($section: $section);
+@use 'style_reports' with ($section: $section);
 
 #{$section} {
 	// grid-column: #{$grid_full};

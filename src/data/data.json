@@ -81,6 +81,9 @@
 			}
 		]
 	},
+	"reports": {
+		"heading": "Live Reports"
+	},
 	"social": [
 		{
 			"name": "Facebook",
