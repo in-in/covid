@@ -1,21 +1,7 @@
 @use 'config' as *;
 
 .layout {
-	overflow-x: hidden;
-
 	&_header {
 		@include container();
-	}
-
-	&_main {
-		// f
-	}
-
-	&_aside {
-		// f
-	}
-
-	&_footer {
-		// f
 	}
 }
