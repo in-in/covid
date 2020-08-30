@@ -7,6 +7,9 @@
 			"virus": {
 				"value": "virus.svg"
 			},
+			"triangle": {
+				"value": "triangle.svg"
+			},
 			"contagion1": {
 				"value": "contagion1.svg"
 			},
@@ -36,6 +39,27 @@
 			},
 			"prevention4": {
 				"value": "prevention4.svg"
+			},
+			"country_china": {
+				"value": "country_china.svg"
+			},
+			"country_germany": {
+				"value": "country_germany.svg"
+			},
+			"country_iran": {
+				"value": "country_iran.svg"
+			},
+			"country_italy": {
+				"value": "country_italy.svg"
+			},
+			"country_spain": {
+				"value": "country_spain.svg"
+			},
+			"country_usa": {
+				"value": "country_usa.svg"
+			},
+			"map": {
+				"value": "map.svg"
 			},
 			"social1": {
 				"value": "social_facebook.svg"

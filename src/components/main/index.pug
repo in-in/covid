@@ -4,6 +4,7 @@ include ../hero/index.pug
 include ../icon/index.pug
 include ../overview/index.pug
 include ../prevention/index.pug
+include ../reports/index.pug
 include ../section/index.pug
 include ../symptoms/index.pug
 
@@ -45,4 +46,4 @@ mixin main()
 		+section()(class=s.section__reports)
 			div(class=s.section_inner)
 				+heading({text: d.reports.heading, tag: 'h2'})(class=s.section_heading)
-				p reports
+				+reports()

@@ -82,7 +82,45 @@
 		]
 	},
 	"reports": {
-		"heading": "Live Reports"
+		"heading": "Live Reports",
+		"countries": [
+			{
+				"image": "assetIconCountryChina",
+				"name": "China",
+				"cases": 81.347,
+				"growth": false
+			},
+			{
+				"image": "assetIconCountryGermany",
+				"name": "Germany",
+				"cases": 50.871,
+				"growth": true
+			},
+			{
+				"image": "assetIconCountryIran",
+				"name": "Iran",
+				"cases": 32.332,
+				"growth": true
+			},
+			{
+				"image": "assetIconCountryItaly",
+				"name": "Italy",
+				"cases": 86.498,
+				"growth": true
+			},
+			{
+				"image": "assetIconCountrySpain",
+				"name": "Spain",
+				"cases": 64.059,
+				"growth": true
+			},
+			{
+				"image": "assetIconCountryUsa",
+				"name": "USA",
+				"cases": 100.392,
+				"growth": true
+			}
+		]
 	},
 	"social": [
 		{

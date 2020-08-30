@@ -1,0 +1,68 @@
+@use 'config' as *;
+
+.headingList {
+	&_caption {
+		margin-block-end: em($spacing_120);
+	}
+
+	&_item {
+		display: flex;
+		align-items: center;
+		color: $color_base_dark;
+		font-weight: $typography_weight_semi_bold;
+
+		&:not(:last-child) {
+			margin-block-end: em(23);
+		}
+	}
+
+	&_icon {
+		flex-shrink: 0;
+		width: em(48);
+		height: auto;
+	}
+
+	&_name {
+		flex-grow: 1;
+		padding-inline-start: em(18 / $size_font_ms_u_3);
+		padding-inline-end: em(18 / $size_font_ms_u_3);
+		font-size:
+			locks(
+				$size_font_min * $size_font_ms_u_2,
+				$size_font_max * $size_font_ms_u_3
+			);
+		font-weight: inherit;
+
+		@include truncate_text();
+	}
+
+	&_cases {
+		padding-inline-start: em(18 / $size_font_ms_u_2);
+		padding-inline-end: em(18 / $size_font_ms_u_2);
+		font-size:
+			locks(
+				$size_font_min * $size_font_ms_u_1,
+				$size_font_max * $size_font_ms_u_2
+			);
+		font-weight: inherit;
+	}
+
+	&_growthMark {
+		$growthMark: compose(&);
+
+		flex-shrink: 0;
+		width: em(20);
+		height: auto;
+
+		&Up {
+			composes: $growthMark;
+			fill: $color_base_primary;
+		}
+
+		&Down {
+			composes: $growthMark;
+			transform: scale(-1);
+			fill: $color_base_dark;
+		}
+	}
+}

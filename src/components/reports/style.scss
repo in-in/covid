@@ -1,0 +1,40 @@
+@use 'config' as *;
+
+.reports {
+	display: grid;
+	grid-template-columns: repeat($grid_columns, 1fr);
+	align-items: center;
+	gap: em($spacing_gutter);
+
+	&_list {
+		grid-row: 2;
+		grid-column: #{$grid_full};
+		padding: locks(8, 56);
+		box-shadow: compose-shadow($shadow_base);
+
+		@include breakpoint(s) {
+			grid-column: span 10 / -1;
+		}
+
+		@include breakpoint(m) {
+			grid-column: span 8 / -1;
+		}
+
+		@include breakpoint(l) {
+			grid-row: 1;
+			grid-column: span 6 / -1;
+		}
+	}
+
+	&_map {
+		grid-row: 1;
+		grid-column: #{$grid_full};
+		width: 100%;
+		height: auto;
+
+		@include breakpoint(l) {
+			grid-row: 1;
+			grid-column: 1 / span 10;
+		}
+	}
+}
