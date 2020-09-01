@@ -10,9 +10,29 @@
 		align-items: center;
 		color: $color_base_dark;
 		font-weight: $typography_weight_semi_bold;
+		cursor: pointer;
 
 		&:not(:last-child) {
 			margin-block-end: em(23);
+		}
+
+		&__active {
+			position: relative;
+
+			&::before {
+				--size: 6px;
+
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 100%;
+				width: var(--size);
+				height: var(--size);
+				margin-inline-end: em(4);
+				border-radius: $size_border_radius_circle;
+				background-color: $color_base_primary;
+				transform: translateY(-50%);
+			}
 		}
 	}
 

@@ -31,10 +31,17 @@
 		grid-column: #{$grid_full};
 		width: 100%;
 		height: auto;
+		fill: $color_base_dark;
 
 		@include breakpoint(l) {
 			grid-row: 1;
 			grid-column: 1 / span 10;
+		}
+
+		.activeCountry {
+			fill: $color_base_primary;
+
+			@include transition($prop: fill, $duration: $time_slowly);
 		}
 	}
 }

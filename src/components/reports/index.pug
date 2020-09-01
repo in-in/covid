@@ -2,6 +2,6 @@ include ../headingList/index.pug
 include ../icon/index.pug
 
 mixin reports()
-	div(class=s.reports)&attributes(attributes)
+	div(class=s.reports x-data='{activeCountry: "usa"}')&attributes(attributes)
 		+headingList(d.reports.heading, d.reports.countries)(class=s.reports_list)
 		+icon('assetIconMap')(class=s.reports_map)
