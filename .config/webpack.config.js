@@ -79,6 +79,13 @@ const config = {
 		),
 		new HtmlWebpackInlineSVGPlugin({
 			'runPreEmit': true,
+			'svgoConfig': [
+				{
+					'removeUnknownsAndDefaults': {
+						'unknownAttrs': false,
+					},
+				},
+			],
 		}),
 		new FaviconsWebpackPlugin({
 			'logo': path.join(PATHS.src, 'assets', 'favicon.svg'),
