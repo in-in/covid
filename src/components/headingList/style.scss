@@ -28,18 +28,18 @@
 			position: relative;
 
 			&::before {
-				--size: 6px;
-
 				content: '';
 				position: absolute;
 				top: 50%;
 				right: 100%;
-				width: var(--size);
-				height: var(--size);
 				margin-inline-end: em(4);
+				border: 2px solid $color_base_primary;
 				border-radius: $size_border_radius_circle;
-				background-color: $color_base_primary;
 				transform: translateY(-50%);
+
+				@include breakpoint(m) {
+					border-width: 3px;
+				}
 			}
 		}
 	}
