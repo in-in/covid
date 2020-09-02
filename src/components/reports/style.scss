@@ -12,14 +12,6 @@
 		padding: locks(8, 56);
 		box-shadow: compose-shadow($shadow_base);
 
-		@include breakpoint(s) {
-			grid-column: span 10 / -1;
-		}
-
-		@include breakpoint(m) {
-			grid-column: span 8 / -1;
-		}
-
 		@include breakpoint(l) {
 			grid-row: 1;
 			grid-column: span 6 / -1;

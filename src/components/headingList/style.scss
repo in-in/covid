@@ -5,16 +5,22 @@
 		margin-block-end: em($spacing_120);
 	}
 
+	&_items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: em($spacing_120);
+
+		@include breakpoint(l) {
+			gap: em($spacing_110);
+		}
+	}
+
 	&_item {
 		display: flex;
 		align-items: center;
 		color: $color_base_dark;
 		font-weight: $typography_weight_semi_bold;
 		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-block-end: em(23);
-		}
 
 		&__active {
 			position: relative;
