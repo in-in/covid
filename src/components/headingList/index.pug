@@ -8,11 +8,13 @@ mixin headingList(title, list)
 		ul(class=s.headingList_items)
 			each item in list.sort((a, b) => b.cases - a.cases)
 				- let {cases, image, name, growth} = item;
-				li(
-					class=s.headingList_item
-					:class=`{'${s.headingList_item__active}': activeCountry === '${name.toLowerCase()}'}`
-					@click=`activeCountry = '${name.toLowerCase()}'`)
-					+icon(image)(class=s.headingList_icon)
-					p(class=s.headingList_name)= name
-					p(class=s.headingList_cases)= cases
-					+icon('assetIconTriangle')(class=s[`headingList_growthMark${growth ? 'Up': 'Down'}`])
+				li
+					button(
+						class=s.headingList_button
+						:class=`{
+							'${s.headingList_button__active}': activeCountry === '${name.toLowerCase()}'}`
+						@click=`activeCountry = '${name.toLowerCase()}'`)
+						+icon(image)(class=s.headingList_icon)
+						span(class=s.headingList_name)= name
+						span(class=s.headingList_cases)= cases
+						+icon('assetIconTriangle')(class=s[`headingList_growthMark${growth ? 'Up': 'Down'}`])

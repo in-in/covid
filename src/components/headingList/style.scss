@@ -15,10 +15,12 @@
 		}
 	}
 
-	&_item {
+	&_button {
 		display: flex;
 		align-items: center;
+		width: 100%;
 		color: $color_base_dark;
+		text-align: left;
 		font-weight: $typography_weight_semi_bold;
 		cursor: pointer;
 
