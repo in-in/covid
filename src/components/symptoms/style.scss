@@ -2,9 +2,9 @@
 @use 'data' as d;
 @use 'config' as *;
 
-.symptoms {
-	$root: &;
+$symptoms: '.symptoms';
 
+#{$symptoms} {
 	display: grid;
 	grid-template-columns: inherit;
 	column-gap: inherit;
@@ -34,65 +34,63 @@
 		width: 100%;
 		height: auto;
 	}
+}
 
-	&_item {
-		@each $index, $item in d.$symptoms {
-			&:nth-of-type(#{$index}) {
-				#{$root}_marker {
-					offset-path: path(map.get($item, path));
-				}
+:global #{$symptoms}_item {
+	@each $index, $item in d.$symptoms {
+		&:nth-of-type(#{$index}) {
+			#{$symptoms}_marker {
+				offset-path: path(map.get($item, path));
+			}
 
-				/* stylelint-disable max-nesting-depth */
-				@keyframes curve#{$index} {
-					to {
-						stroke-dashoffset: map.get($item, curve);
-					}
-				}
-				/* stylelint-enable */
-
-				@include hover() {
-					#{$root}_curve {
-						animation-name: curve#{$index};
-					}
-					#{$root}_marker {
-						animation-direction: map.get($item, move);
-					}
+			@keyframes :global(curve#{$index}) {
+				to {
+					stroke-dashoffset: map.get($item, curve);
 				}
 			}
-		}
 
-		@include hover() {
-			#{$root}_name {
-				stroke: $color_base_primary;
-				stroke-width: 2px;
-			}
-
-			#{$root}_marker {
-				animation-name: move;
-				animation-duration: 2s;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				fill: $color_base_primary;
-				stroke: $color_base_dark;
-				stroke-width: 1;
-				r: 10;
-			}
-
-			#{$root}_point {
-				display: none;
-			}
-
-			#{$root}_curve {
-				animation-duration: 6s;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
-				stroke: $color_base_primary;
-				stroke-dasharray: 20;
+			@include hover() {
+				#{$symptoms}_curve {
+					animation-name: (curve#{$index});
+				}
+				#{$symptoms}_marker {
+					animation-direction: map.get($item, move);
+				}
 			}
 		}
 	}
 
-	@keyframes move {
+	@include hover() {
+		#{$symptoms}_name {
+			stroke: $color_base_primary;
+			stroke-width: 2px;
+		}
+
+		#{$symptoms}_marker {
+			animation-name: (move);
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			fill: $color_base_primary;
+			stroke: $color_base_dark;
+			stroke-width: 1;
+			r: 10;
+		}
+
+		#{$symptoms}_point {
+			display: none;
+		}
+
+		#{$symptoms}_curve {
+			animation-duration: 6s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			stroke: $color_base_primary;
+			stroke-dasharray: 20;
+		}
+	}
+
+	@keyframes :global(move) {
 		to {
 			offset-distance: 100%;
 		}

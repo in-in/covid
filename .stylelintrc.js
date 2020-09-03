@@ -212,7 +212,12 @@ module.exports = {
 		'selector-no-vendor-prefix': true,
 		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
-		'selector-pseudo-class-no-unknown': true,
+		'selector-pseudo-class-no-unknown': [
+			true,
+			{
+				'ignorePseudoClasses': ['global'],
+			},
+		],
 		'selector-pseudo-class-parentheses-space-inside': 'never',
 		'selector-pseudo-class-whitelist': null,
 		'selector-pseudo-element-blacklist': null,
