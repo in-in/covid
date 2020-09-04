@@ -1,12 +1,13 @@
 $section: '.section';
 
 @use 'config' as *;
+@use 'style_contagion' with ($section: $section);
+@use 'style_help' with ($section: $section);
 @use 'style_hero' with ($section: $section);
 @use 'style_overview' with ($section: $section);
-@use 'style_contagion' with ($section: $section);
-@use 'style_symptoms' with ($section: $section);
 @use 'style_prevention' with ($section: $section);
 @use 'style_reports' with ($section: $section);
+@use 'style_symptoms' with ($section: $section);
 
 #{$section} {
 	#{$section}_inner {

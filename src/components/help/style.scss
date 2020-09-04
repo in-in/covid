@@ -1,0 +1,13 @@
+@use 'config' as *;
+
+.help {
+	display: grid;
+	grid-template-columns: inherit;
+	column-gap: inherit;
+
+	&_heading {
+		grid-row: 1;
+		grid-column: #{$grid_full};
+		text-align: center;
+	}
+}

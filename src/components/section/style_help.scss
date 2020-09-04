@@ -1,0 +1,14 @@
+@use 'data' as d;
+@use 'config' as *;
+
+$section: null !default;
+
+#{$section}__help {
+	position: relative;
+	padding-block-start: t2c(108, end);
+	padding-block-end: t2c(108, end);
+
+	#{$section}_virus {
+		// @include figure(d.$figures_symptoms, 1247);
+	}
+}

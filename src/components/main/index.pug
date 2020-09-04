@@ -1,5 +1,6 @@
 include ../contagion/index.pug
 include ../heading/index.pug
+include ../help/index.pug
 include ../hero/index.pug
 include ../icon/index.pug
 include ../overview/index.pug
@@ -47,3 +48,7 @@ mixin main()
 			div(class=s.section_inner)
 				+heading({text: d.reports.heading, tag: 'h2'})(class=s.section_heading)
 				+reports()
+
+		+section()(class=s.section__help)
+			div(class=s.section_inner)
+				+help()
