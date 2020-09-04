@@ -16,15 +16,7 @@ $section: null !default;
 	}
 
 	#{$section}_inner {
-		display: grid;
-		grid-template-columns: repeat($grid_columns, 1fr);
-		column-gap: em($spacing_gutter);
-
-		@include container();
-
 		> * {
-			grid-column: #{$grid_full};
-
 			@include breakpoint(s) {
 				grid-column: span 10 / -1;
 			}
@@ -36,9 +28,6 @@ $section: null !default;
 	}
 
 	#{$section}_virus {
-		height: auto;
-		opacity: 0.5;
-
 		@include breakpoint(s) {
 			opacity: 1;
 		}

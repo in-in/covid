@@ -9,5 +9,20 @@ $section: '.section';
 @use 'style_reports' with ($section: $section);
 
 #{$section} {
-	// grid-column: #{$grid_full};
+	#{$section}_inner {
+		display: grid;
+		grid-template-columns: repeat($grid_columns, 1fr);
+		column-gap: em($spacing_gutter);
+
+		@include container();
+
+		> * {
+			grid-column: #{$grid_full};
+		}
+	}
+
+	#{$section}_virus {
+		height: auto;
+		opacity: 0.4;
+	}
 }

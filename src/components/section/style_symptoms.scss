@@ -8,18 +8,6 @@ $section: null !default;
 	padding-block-start: t2c(50, end);
 	padding-block-end: t2c(90, end);
 
-	#{$section}_inner {
-		display: grid;
-		grid-template-columns: repeat($grid_columns, 1fr);
-		column-gap: em($spacing_gutter);
-
-		@include container();
-
-		> * {
-			grid-column: #{$grid_full};
-		}
-	}
-
 	#{$section}_cloud {
 		height: auto;
 		opacity: 0.3;

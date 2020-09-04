@@ -6,18 +6,6 @@ $section: null !default;
 	padding-block-start: t2c(64, end);
 	padding-block-end: t2c(64, end);
 
-	#{$section}_inner {
-		display: grid;
-		grid-template-columns: repeat($grid_columns, 1fr);
-		column-gap: em($spacing_gutter);
-
-		@include container();
-
-		> * {
-			grid-column: #{$grid_full};
-		}
-	}
-
 	#{$section}_heading {
 		@include visually-hidden();
 	}
