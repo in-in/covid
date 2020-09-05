@@ -1,4 +1,7 @@
-mixin button(text, ...modifier)
+//- mixin button(text, type, ...modifier)
+mixin button(prop, ...modifier)
+	- let {text, type = 'button'} = prop;
 	button(
 		class=cx(s.button, modifier.map(mod => s[`button__${mod}`]))
-		)&attributes(attributes)= text
+		type=type
+		)&attributes(attributes)!= text
