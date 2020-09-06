@@ -8,6 +8,16 @@
 	&_heading {
 		grid-row: 1;
 		grid-column: #{$grid_full};
+		margin-block-end: em($spacing_110);
 		text-align: center;
+	}
+
+	&_form {
+		grid-row: 2;
+		grid-column: #{$grid_full};
+
+		@include breakpoint(s) {
+			grid-column: 4 / -4;
+		}
 	}
 }

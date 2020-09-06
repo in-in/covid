@@ -1,0 +1,46 @@
+@use 'sass:color';
+@use 'config' as *;
+
+.form {
+	display: flex;
+	width: 100%;
+	padding: em(18);
+	border-radius: em($spacing_140);
+	box-shadow: compose-shadow($shadow_form);
+
+	&:focus-within {
+		@include focus();
+	}
+
+	&_input {
+		flex-grow: 1;
+		width: 100%;
+		margin-inline-start: em(18);
+		margin-inline-end: em(18);
+		border: 0;
+		background: none;
+		color: inherit;
+
+		&:focus {
+			box-shadow: none !important;
+		}
+	}
+
+	&_button {
+		display: flex;
+		align-items: center;
+		text-indent: -9999px;
+
+		@include breakpoint(s) {
+			text-indent: 0;
+		}
+
+		&Icon {
+			fill: currentColor;
+
+			@include breakpoint(s) {
+				display: none;
+			}
+		}
+	}
+}

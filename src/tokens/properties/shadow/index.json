@@ -2,6 +2,9 @@
 	"shadow": {
 		"base": {
 			"value": "0 35px 85px"
+		},
+		"form": {
+			"value": "0 8px 80px"
 		}
 	}
 }

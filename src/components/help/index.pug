@@ -1,7 +1,8 @@
+include ../form/index.pug
 include ../heading/index.pug
 
 mixin help()
 	div(class=s.help)&attributes(attributes)
 		+heading({text: d.help.heading, tag: 'h2'}, 'h2')(class=s.help_heading)
 			+heading({text: d.help.subheading, tag: 'p'}, 'h5')
-		block
+		+form()(class=s.help_form)

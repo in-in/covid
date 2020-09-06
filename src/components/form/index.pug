@@ -1,0 +1,18 @@
+include ../button/index.pug
+include ../icon/index.pug
+
+mixin form()
+	form(
+		action=''
+		method='POST'
+		accept-charset='UTF-8'
+		class=s.form)&attributes(attributes)
+		input(
+			type='email'
+			aria-label='Email'
+			name='email'
+			class=s.form_input
+			placeholder='Email Address'
+			required='')
+		+button({text: 'Send', type: 'submit'}, 'primary')(class=s.form_button)
+			+icon('assetIconSend')(class=s.form_buttonIcon)
