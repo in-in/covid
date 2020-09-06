@@ -7,7 +7,7 @@
 	padding-block-end: em(var(--spacing));
 	padding-inline-start: em($spacing_120);
 	padding-inline-end: em($spacing_120);
-	border-radius: em(calc(var(--spacing) * 2));
+	border-radius: em(calc(var(--spacing) * 3));
 	font-weight: $typography_weight_semi_bold;
 	transform: perspective(1px) translateZ(0);
 
