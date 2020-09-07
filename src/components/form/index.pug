@@ -8,11 +8,13 @@ mixin form()
 		accept-charset='UTF-8'
 		class=s.form)&attributes(attributes)
 		input(
+			class=s.form_input
 			type='email'
+			id='email'
 			aria-label='Email'
 			name='email'
-			class=s.form_input
-			placeholder='Email Address'
-			required='')
+			placeholder=' '
+			required)
+		label(for='email' class=s.form_label) Email Address
 		+button({text: 'Send', type: 'submit'}, 'primary')(class=s.form_button)
 			+icon('assetIconSend')(class=s.form_buttonIcon)
