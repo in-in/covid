@@ -16,8 +16,8 @@ const styles = {
 		{
 			'loader': 'postcss-loader',
 			'options': {
-				'config': {
-					'path': PATHS.config,
+				'postcssOptions': {
+					'config': PATHS.config,
 				},
 			},
 		},
@@ -36,30 +36,30 @@ const styles = {
 	],
 };
 
-const images = {
-	'test': /\.(png|jpe?g|webp)$/i,
-	'use': [
-		{
-			'loader': 'image-webpack-loader',
-			'options': {
-				'mozjpeg': {
-					'progressive': true,
-					'quality': 85,
-				},
-				'optipng': {
-					'enabled': false,
-				},
-				'pngquant': {
-					'quality': [0.8, 0.85],
-					'speed': 4,
-				},
-				'webp': {
-					'quality': 85,
-				},
-			},
-		},
-	],
-};
+// const images = {
+// 	'test': /\.(png|jpe?g|webp)$/i,
+// 	'use': [
+// 		{
+// 			'loader': 'image-webpack-loader',
+// 			'options': {
+// 				'mozjpeg': {
+// 					'progressive': true,
+// 					'quality': 85,
+// 				},
+// 				'optipng': {
+// 					'enabled': false,
+// 				},
+// 				'pngquant': {
+// 					'quality': [0.8, 0.85],
+// 					'speed': 4,
+// 				},
+// 				'webp': {
+// 					'quality': 85,
+// 				},
+// 			},
+// 		},
+// 	],
+// };
 
 const config = {
 	'mode': 'production',

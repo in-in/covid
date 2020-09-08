@@ -17,16 +17,16 @@ const saveJSON = (fileName, json) => {
 };
 
 module.exports = () => ({
-	'plugins': {
-		'autoprefixer': {},
-		'postcss-normalize': {},
-		'postcss-media-minmax': {},
-		'postcss-modules': {
+	'plugins': [
+		'autoprefixer',
+		'postcss-normalize',
+		'postcss-media-minmax',
+		['postcss-modules', {
 			'generateScopedName': isDev ? '[local]' : '[hash:base64:10]',
 			'getJSON': saveJSON,
-		},
-		'postcss-sort-media-queries': {
+		}],
+		['postcss-sort-media-queries', {
 			'sort': 'mobile-first',
-		},
-	},
+		}],
+	],
 });

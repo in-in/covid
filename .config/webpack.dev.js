@@ -21,8 +21,8 @@ const style = {
 		{
 			'loader': 'postcss-loader',
 			'options': {
-				'config': {
-					'path': PATHS.config,
+				'postcssOptions': {
+					'config': PATHS.config,
 				},
 				'sourceMap': true,
 			},
