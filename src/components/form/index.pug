@@ -3,16 +3,16 @@ include ../icon/index.pug
 
 mixin form()
 	form(
-		action=''
-		method='POST'
+		action='https://formspree.io/mvowebpg'
 		accept-charset='UTF-8'
+		method='POST'
 		class=s.form)&attributes(attributes)
 		input(
 			class=s.form_input
 			type='email'
 			id='email'
 			aria-label='Email'
-			name='email'
+			name='Covid'
 			placeholder=' '
 			required)
 		label(for='email' class=s.form_label) Email Address
