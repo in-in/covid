@@ -114,3 +114,17 @@ $figures_prevention: (
 		'transform': translateX(50%)
 	),
 );
+
+$figures_help: (
+	'0': (
+		'top': 80,
+		'right': 176,
+		'width': 150,
+	),
+	'1': (
+		'bottom': 0,
+		'right': 0,
+		'width': 374,
+		'transform': translate(50%, 20%),
+	),
+);

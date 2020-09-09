@@ -52,3 +52,6 @@ mixin main()
 		+section()(class=s.section__help)
 			div(class=s.section_inner)
 				+help()
+			each i, idx in Array(2)
+				+icon('assetIconVirus')(
+					class=cx(s.section_virus, s[`section_virus${idx}`]))

@@ -1,23 +1,16 @@
 @use 'config' as *;
 
 .help {
-	display: grid;
-	grid-template-columns: inherit;
-	column-gap: inherit;
-
 	&_heading {
-		grid-row: 1;
-		grid-column: #{$grid_full};
 		margin-block-end: em($spacing_110);
 		text-align: center;
 	}
 
 	&_form {
-		grid-row: 2;
-		grid-column: #{$grid_full};
-
-		@include breakpoint(s) {
-			grid-column: 4 / -4;
-		}
+		width: 100%;
+		max-width: em(874);
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		background-color: $color_base_white;
 	}
 }

@@ -212,7 +212,7 @@
 
 @mixin figure($data, $container_height, $color: $color_base_primary) {
 	position: absolute;
-	z-index: 0;
+	z-index: -1;
 
 	@each $index, $item in $data {
 		&#{$index} {
