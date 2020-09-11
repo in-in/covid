@@ -1,6 +1,8 @@
 @use 'config' as *;
 
 .layout {
+	overflow: hidden;
+
 	&_header {
 		@include container();
 	}

@@ -1,6 +1,10 @@
 @use 'sass:color';
 @use 'config' as *;
 
+:root {
+	overflow-x: hidden;
+}
+
 *:focus {
 	@include focus();
 }
