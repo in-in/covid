@@ -133,19 +133,19 @@
 			"icon": "assetIconSocial1"
 		},
 		{
-			"name": "Twitter",
-			"url": "https://twitter.com",
-			"icon": "assetIconSocial4"
+			"name": "Youtube",
+			"url": "https://www.youtube.com",
+			"icon": "assetIconSocial2"
 		},
 		{
-			"name": "Linkedin",
-			"url": "https://www.linkedin.com",
+			"name": "Vimeo",
+			"url": "https://vimeo.com",
 			"icon": "assetIconSocial3"
 		},
 		{
-			"name": "Instagram",
-			"url": "https://www.instagram.com",
-			"icon": "assetIconSocial2"
+			"name": "Twitter",
+			"url": "https://twitter.com",
+			"icon": "assetIconSocial4"
 		}
 	]
 }

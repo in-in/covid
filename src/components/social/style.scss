@@ -9,10 +9,6 @@
 	&_item {
 		display: flex;
 		flex-shrink: 0;
-		width: em($size_social_icon);
-		height: em($size_social_icon);
-		border-radius: $size_border_radius_circle;
-		background-color: #ccc;
 
 		&:not(:last-child) {
 			margin-inline-end: em($spacing_60);
@@ -20,17 +16,16 @@
 	}
 
 	&_link {
-		padding: em($spacing_80);
+		padding: em(10);
 
 		@include hover($selector: #{$root}_icon) {
-			// fill: $color_base_primary;
+			fill: $color_base_carnation;
 		}
 	}
 
 	&_icon {
-		width: 100%;
-		height: auto;
-		// fill: $color_base_dark;
+		width: em($size_social_icon);
+		height: em($size_social_icon);
 
 		@include transition(fill);
 	}
