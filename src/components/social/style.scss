@@ -1,3 +1,4 @@
+@use 'sass:string';
 @use 'config' as *;
 
 .social {
@@ -18,14 +19,19 @@
 	&_link {
 		padding: em(10);
 
-		@include hover($selector: #{$root}_icon) {
-			fill: $color_base_carnation;
+		@each $key, $val in $brand {
+			&[title=#{$key} i] {
+				@include hover($selector: #{$root}_icon) {
+					fill: string.unquote($val);
+				}
+			}
 		}
 	}
 
 	&_icon {
 		width: em($size_social_icon);
 		height: em($size_social_icon);
+		fill: $color_base_dark;
 
 		@include transition(fill);
 	}
