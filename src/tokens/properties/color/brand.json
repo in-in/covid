@@ -1,18 +1,16 @@
 {
-	"color": {
-		"brand": {
-			"facebook": {
-				"value": "#1877F2"
-			},
-			"youtube": {
-				"value": "#ff0000"
-			},
-			"vimeo": {
-				"value": "#1ab7ea"
-			},
-			"twitter": {
-				"value": "#1da1f2"
-			}
+	"brand": {
+		"facebook": {
+			"value": "#1877F2"
+		},
+		"youtube": {
+			"value": "#ff0000"
+		},
+		"vimeo": {
+			"value": "#1ab7ea"
+		},
+		"twitter": {
+			"value": "#1da1f2"
 		}
 	}
 }

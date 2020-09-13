@@ -115,6 +115,14 @@ const sdConfig = {
 						'category': 'asset',
 					},
 				},
+			}, {
+				'destination': 'brand.scss',
+				'format': 'map-nested',
+				'filter': {
+					'attributes': {
+						'category': 'brand',
+					},
+				},
 			}],
 		},
 		'js': {
