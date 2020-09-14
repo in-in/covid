@@ -58,7 +58,12 @@ $prevention: '.prevention';
 				width: var(--size);
 				height: var(--size);
 				border-radius: $size_border_radius_circle;
-				background-color: color.scale($color_base_primary, $alpha: -80%);
+				background-color:
+					color.adjust(
+						$color_base_primary,
+						$lightness: 36.86%,
+						$saturation: 1.7%
+					);
 				color: $color_base_primary;
 				font-family: $typography_family_secondary;
 				font-size: $size_font_ms_u_3 + em;
