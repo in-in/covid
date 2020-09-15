@@ -20,31 +20,31 @@
 	"hero": {
 		"heading": "Stay At&nbsp;Home Quarantine To&nbsp;Stop Corona Virus",
 		"subheading": "COVID-19 Alert",
-		"description": "There is&nbsp;no&nbsp;specific medicine to&nbsp;prevent or&nbsp;treat coronavirus disease (COVID-19). People may need supportive care&nbsp;to"
+		"description": "People who have been exposed to&nbsp;the new coronavirus and are at&nbsp;risk of&nbsp;COVID-19 may practice self-quarantine. Health experts recommend that self-quarantine should last 14&nbsp;days."
 	},
 	"overview": {
 		"heading": "Coronavirus",
 		"subheading": "What Is Covid-19",
-		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused a&nbsp;recent outbreak of&nbsp;respiratory illness now called COVID-19. Lauren Sauer, M.S., the director of&nbsp;operations with the Johns Hopkins Office of&nbsp;Critical Event Preparedness and Response"
+		"description": "Coronaviruses are a&nbsp;large family of&nbsp;viruses that are known to&nbsp;cause diseases ranging from colds to&nbsp;more severe diseases such as&nbsp;Middle Eastern respiratory syndrome (MERS) and severe acute respiratory syndrome (SARS). Symptoms of&nbsp;COVID-19 are similar to&nbsp;those of&nbsp;a&nbsp;cold at&nbsp;first. However, the disease can cause severe pneumonia, which can be&nbsp;fatal."
 	},
 	"contagion": {
 		"heading": "Contagion",
 		"subheading": "Covid-19",
-		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type",
+		"description": "COVID-19&nbsp;is spread primarily when people are in&nbsp;close contact and one person inhales small drops produced by&nbsp;an&nbsp;infected person when coughing, sneezing or&nbsp;talking.",
 		"list": [
 			{
 				"title": "Air Transmission",
-				"description": "Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify",
+				"description": "Through respiratory droplets produced when an&nbsp;infected person coughs, sneezes, or&nbsp;talks",
 				"image": "assetIconContagion1"
 			},
 			{
 				"title": "Human Contacts",
-				"description": "Washing your hands is&nbsp;one of&nbsp;the simplest ways you can protect",
+				"description": "Any person who was within 6&nbsp;feet of&nbsp;an&nbsp;infected person for at&nbsp;least 15&nbsp;minutes, starting from 2&nbsp;days before illness",
 				"image": "assetIconContagion2"
 			},
 			{
 				"title": "Containted Objects",
-				"description": "Use the tissue while sneezing, In&nbsp;this way, you can protect your droplets",
+				"description": "Touching a&nbsp;surface or&nbsp;object on&nbsp;which there is&nbsp;a&nbsp;virus, and then touching your own mouth, nose, or&nbsp;your eyes",
 				"image": "assetIconContagion3"
 			}
 		]
@@ -52,31 +52,31 @@
 	"symptoms": {
 		"heading": "Symptoms",
 		"subheading": "Covid-19",
-		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused a&nbsp;recent outbreak of&nbsp;respiratory"
+		"description": "COVID-19 symptoms are varied, but usually include fever and cough. Some people without symptoms may spread the virus. The most common symptoms in&nbsp;humans include:"
 	},
 	"prevention": {
 		"heading": "What should we&nbsp;do",
 		"subheading": "Covid-19",
-		"description": "Corona viruses are a&nbsp;type of&nbsp;virus. There are many different kinds, and some cause disease. A&nbsp;newly identified type has caused",
+		"description": "COVID-19 vaccine is&nbsp;not expected before 2021. Preventive measures that reduce the chances of&nbsp;infection include:",
 		"list": [
 			{
 				"title": "Wear Masks",
-				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking",
+				"description": "Everyone should wear a&nbsp;mask in&nbsp;public places and near people who do&nbsp;not live in&nbsp;your home, especially when it&nbsp;is&nbsp;difficult to&nbsp;support other social distancing measures. Masks should not be&nbsp;worn on&nbsp;small children under the age of&nbsp;2&nbsp;years, on&nbsp;all those who have problems with breathing, is&nbsp;unconscious.",
 				"image": "assetIconPrevention1"
 			},
 			{
 				"title": "Wash Your Hands",
-				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking. Objectively Continually seize impactful vortals",
+				"description": "Wash your hands often with soap and water for at&nbsp;least 20&nbsp;seconds, especially after you&rsquo;ve been in&nbsp;a&nbsp;public place or&nbsp;after you&rsquo;ve blown your nose, coughed or&nbsp;sneezed. If&nbsp;soap and water are not available, use a&nbsp;hand sanitizer containing at&nbsp;least&nbsp;60% alcohol. Cover all hand surfaces and rub them until they are dry.",
 				"image": "assetIconPrevention2"
 			},
 			{
 				"title": "Use Nose&nbsp;&mdash; Rag",
-				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic &laquo;outside the box&raquo; thinking. Objectively",
+				"description": "Always cover your mouth and nose with a&nbsp;tissue when you cough or&nbsp;sneeze, or&nbsp;use the inside of&nbsp;your elbow and do&nbsp;not spit. Then immediately throw away the used wipes and wash your hands. By&nbsp;following the rules of&nbsp;respiratory hygiene, you protect people around you from viruses such as&nbsp;cold, flu and COVID-19.",
 				"image": "assetIconPrevention3"
 			},
 			{
 				"title": "Avoid Contacts",
-				"description": "Continually seize impactful vortals rather than future-proof supply chains. Uniquely exploit emerging niches via fully tested meta-services. Competently pursue standards compliant leadership skills vis-a-vis pandemic",
+				"description": "Avoid close contact with sick people. If&nbsp;possible, endure 6&nbsp;feet between the sick person and other family members. Keeping away from others is&nbsp;especially important for people who are at&nbsp;higher risk of&nbsp;serious illness.",
 				"image": "assetIconPrevention4"
 			}
 		]
