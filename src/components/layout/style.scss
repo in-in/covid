@@ -1,7 +1,20 @@
+@use 'sass:color';
 @use 'config' as *;
 
 .layout {
+	$gradient: color.scale($color_base_primary, $alpha: -90%);
+
 	overflow: hidden;
+	background-image:
+		linear-gradient(to bottom, $gradient, $color_base_crystal),
+		linear-gradient(to top, $gradient, $color_base_crystal);
+	background-position:
+		top,
+		bottom;
+	background-size:
+		100% clamp(836px, 58vw, 1112px),
+		100% clamp(1022px, 71vw, 1372px);
+	background-repeat: no-repeat;
 
 	&_header {
 		@include container();
