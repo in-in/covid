@@ -25,6 +25,8 @@
 	background-color: $color_base_white;
 	box-shadow: compose-shadow($shadow_base);
 
+	@include transition(transform);
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -33,10 +35,12 @@
 		height: em(6);
 		background-color: $color_base_crystal;
 
-		@include transition();
+		@include transition(background-color);
 	}
 
 	@include hover() {
+		transform: scale(1.05);
+
 		&::after {
 			background-color: $color_base_primary;
 		}
