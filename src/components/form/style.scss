@@ -45,7 +45,7 @@
 		overflow: hidden;
 		transform: translateY(-50%);
 
-		@include transition($prop: top);
+		@include transition(top);
 	}
 
 	&_button {
