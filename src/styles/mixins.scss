@@ -64,13 +64,13 @@
 }
 
 @mixin active($color) {
-	background-position: center;
 	background-image:
 		radial-gradient(
 			circle,
 			$color_base_crystall calc(1% - 1px),
 			color.scale($color, $lightness: -50%) 1%
 		);
+	background-position: center;
 	background-size: 15000%;
 	transition-property: background-size;
 	transition-duration: calc(var(--transition_duration) / 2);
