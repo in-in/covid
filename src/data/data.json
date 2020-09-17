@@ -1,20 +1,16 @@
 {
 	"menu": [
 		{
-			"title": "Overview",
-			"link": "#Overview"
+			"title": "Overview"
 		},
 		{
-			"title": "Contagion",
-			"link": "#Contagion"
+			"title": "Contagion"
 		},
 		{
-			"title": "Symptoms",
-			"link": "#Symptoms"
+			"title": "Symptoms"
 		},
 		{
-			"title": "Prevention",
-			"link": "#Prevention"
+			"title": "Prevention"
 		}
 	],
 	"hero": {

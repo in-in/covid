@@ -20,26 +20,26 @@ mixin main()
 
 		+section()(class=s.section__overview)
 			div(class=s.section_inner)
-				+overview()
+				+overview()(id='overview')
 			each i, idx in Array(2)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
 
 		+section()(class=s.section__contagion)
 			div(class=s.section_inner)
-				+contagion()
+				+contagion()(id='contagion')
 				+icon('assetIconVirus')(class=cx(s.section_virus, s.section_virus0))
 
 		+section()(class=s.section__symptoms)
 			div(class=s.section_inner)
-				+symptoms()
+				+symptoms()(id='symptoms')
 			each i, idx in Array(2)
 				+icon(`assetIconCloud${idx}`)(
 					class=cx(s.section_cloud, s[`section_cloud${idx}`]))
 
 		+section()(class=s.section__prevention)
 			div(class=s.section_inner)
-				+prevention()
+				+prevention()(id='prevention')
 			each i, idx in Array(3)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))

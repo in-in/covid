@@ -2,6 +2,9 @@ mixin menu(list)
 	nav(class=s.menu)&attributes(attributes)
 		ul(class=s.menu_list)
 			each item in list
-				- let {title, link} = item;
+				- let {title} = item;
 				li(class=s.menu_item)
-					a(href=link class=s.menu_link)= title
+					a(
+						href='#' + title.toLowerCase()
+						class=s.menu_link
+					)= title
