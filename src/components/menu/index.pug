@@ -1,10 +1,12 @@
 mixin menu(list)
 	nav(class=s.menu)&attributes(attributes)
-		ul(class=s.menu_list)
+		ul(class=s.menu_list x-data='covid()')
 			each item in list
 				- let {title} = item;
+				- let href = '#' + title.toLowerCase();
 				li(class=s.menu_item)
 					a(
 						href='#' + title.toLowerCase()
 						class=s.menu_link
+						@click=`smoothScroll('${href}')`
 					)= title
