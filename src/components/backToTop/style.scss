@@ -1,13 +1,38 @@
+@use 'sass:color';
 @use 'config' as *;
 
 .backToTop {
+	$size: 68;
+	$font_size: 10;
+
 	position: fixed;
-	right: 20px;
-	bottom: 20px;
+	right: 1em;
+	bottom: 1em;
 	z-index: 30;
-	width: 44px;
-	height: 44px;
+	width: em($size, $font_size);
+	height: em($size, $font_size);
 	overflow: hidden;
-	word-wrap: break-word;
-	font-size: 12px;
+	padding: em(10, $font_size);
+	color: $color_base_dark;
+	font-size: em($font_size, $size_font_min);
+	cursor: pointer;
+
+	&_text {
+		display: block;
+		width: min-content;
+		margin-right: auto;
+		margin-left: auto;
+		font-weight: $typography_weight_semi_bold;
+		line-height: 1;
+	}
+
+	&_icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		fill: color.scale($color_base_primary, $lightness: 25%);
+	}
 }

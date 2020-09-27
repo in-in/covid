@@ -1,8 +1,12 @@
+include ../icon/index.pug
+
 mixin backToTop()
 	button(
 		type='button'
 		x-data='covid()'
 		x-show='thresholdTop && thresholdBottom'
+		@click.prevent='smoothScroll(".header_menu")'
 		@scroll.window='backToTop()'
 		class=s.backToTop)&attributes(attributes)
-		| backToTop
+		span(class=s.backToTop_text) Back To Top
+		+icon('assetIconVirus')(class=s.backToTop_icon)
