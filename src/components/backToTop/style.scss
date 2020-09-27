@@ -1,0 +1,13 @@
+@use 'config' as *;
+
+.backToTop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 30;
+	width: 44px;
+	height: 44px;
+	overflow: hidden;
+	word-wrap: break-word;
+	font-size: 12px;
+}

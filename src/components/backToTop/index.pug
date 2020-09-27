@@ -1,0 +1,8 @@
+mixin backToTop()
+	button(
+		type='button'
+		x-data='covid()'
+		x-show='thresholdTop && thresholdBottom'
+		@scroll.window='backToTop()'
+		class=s.backToTop)&attributes(attributes)
+		| backToTop

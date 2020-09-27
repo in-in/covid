@@ -1,3 +1,4 @@
+include ../backToTop/index.pug
 include ../contagion/index.pug
 include ../heading/index.pug
 include ../help/index.pug
@@ -55,3 +56,5 @@ mixin main()
 			each i, idx in Array(2)
 				+icon('assetIconVirus')(
 					class=cx(s.section_virus, s[`section_virus${idx}`]))
+
+		+backToTop()
