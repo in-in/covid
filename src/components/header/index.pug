@@ -3,7 +3,9 @@ include ../menu/index.pug
 include ../button/index.pug
 
 mixin header()
-	header(class=s.header)&attributes(attributes)
+	header(class=s.header x-data='covid()')&attributes(attributes)
 		+logo()(class=s.header_logo)
 		+menu(d.menu)(class=s.header_menu)
-		+button({text: 'Contact'}, 'plain')(class=s.header_button)
+		+button({text: 'Contact'}, 'plain')(
+			@click='smoothScroll("#help_form")'
+			class=s.header_button)
