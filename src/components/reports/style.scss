@@ -10,6 +10,7 @@
 		grid-row: 2;
 		grid-column: #{$grid_full};
 		padding: locks(8, 56);
+		background-color: $color_base_white;
 		box-shadow: compose-shadow($shadow_base);
 
 		@include breakpoint(l) {
