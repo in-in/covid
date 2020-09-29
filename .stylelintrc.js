@@ -207,7 +207,7 @@ module.exports = {
 		'selector-type-case': [
 			'upper',
 			{
-				'ignoreTypes': ['circle', 'path'],
+				'ignoreTypes': ['circle', 'path', 'svg'],
 			},
 		],
 		'selector-type-no-unknown': true,
