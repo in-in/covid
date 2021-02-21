@@ -66,6 +66,7 @@ const config = {
 	'output': {
 		'filename': '[name].[contenthash].js',
 		'path': PATHS.dist,
+		'publicPath': '',
 	},
 	'optimization': {
 		'splitChunks': {
