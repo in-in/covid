@@ -93,16 +93,16 @@ const config = {
 					'developerName': null,
 					'developerURL': null,
 					'icons': {
-						// 'appleIcon': [
-						// 	'apple-touch-icon-180x180.png',
-						// ],
+						'appleIcon': [
+							'apple-touch-icon-180x180.png',
+						],
 						'appleStartup': false,
 						'coast': false,
-						// 'favicons': [
-						// 	'favicon-16x16.png',
-						// 	'favicon-32x32.png',
-						// 	'favicon.ico',
-						// ],
+						'favicons': [
+							'favicon-16x16.png',
+							'favicon-32x32.png',
+							'favicon.ico',
+						],
 						'firefox': false,
 						'windows': false,
 						'yandex': false,
