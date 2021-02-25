@@ -1,12 +1,11 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 const common = require('./webpack.config');
-const { PATHS, PAGES } = require('./paths');
+const { PATHS } = require('./paths');
 
 const styles = {
 	'test': /\.scss$/,
@@ -87,26 +86,6 @@ const config = {
 		},
 	},
 	'plugins': [
-		...PAGES.map(
-			(name) => new HtmlWebpackPlugin({
-				'filename': `${name}.html`,
-				'template': path.join(PATHS.pages, `${name}.pug`),
-				'inject': false,
-				'templateParameters': {
-					'env': process.env.NODE_ENV,
-				},
-				// 'templateParameters': (compilation, assets, assetTags, options) => ({
-				// 	compilation,
-				// 	'webpackConfig': compilation.options,
-				// 	'htmlWebpackPlugin': {
-				// 		'tags': assetTags,
-				// 		'files': assets,
-				// 		options,
-				// 	},
-				// 	'env': process.env.NODE_ENV,
-				// }),
-			}),
-		),
 		new HtmlWebpackInlineSVGPlugin({
 			'runPreEmit': true,
 		}),

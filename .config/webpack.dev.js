@@ -68,6 +68,7 @@ const config = {
 	},
 	'plugins': [
 		new StylelintPlugin({
+			'files': '**/*.(s(c|a)ss)',
 			'fix': true,
 		}),
 	],

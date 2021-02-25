@@ -1,10 +1,9 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const classnames = require('classnames');
-// const { PATHS, PAGES } = require('./paths');
-const { PATHS } = require('./paths');
+const { PATHS, PAGES } = require('./paths');
 
 const isDev = process.env.NODE_ENV !== 'prod';
 
@@ -54,22 +53,16 @@ const config = {
 		],
 	},
 	'plugins': [
-		// ...PAGES.map(
-		// 	(name) => new HtmlWebpackPlugin({
-		// 		'filename': `${name}.html`,
-		// 		'template': path.join(PATHS.pages, `${name}.pug`),
-		// 		'templateParameters': (compilation, assets, assetTags, options) => ({
-		// 			compilation,
-		// 			'webpackConfig': compilation.options,
-		// 			'htmlWebpackPlugin': {
-		// 				'tags': assetTags,
-		// 				'files': assets,
-		// 				options,
-		// 			},
-		// 			'env': process.env.NODE_ENV,
-		// 		}),
-		// 	}),
-		// ),
+		...PAGES.map(
+			(name) => new HtmlWebpackPlugin({
+				'filename': `${name}.html`,
+				'template': path.join(PATHS.pages, `${name}.pug`),
+				'inject': false,
+				'templateParameters': {
+					'env': process.env.NODE_ENV,
+				},
+			}),
+		),
 		new HtmlWebpackInlineSVGPlugin({
 			'runPreEmit': true,
 			'svgoConfig': [
