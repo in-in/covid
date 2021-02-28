@@ -45,6 +45,7 @@ const style = {
 
 const config = {
 	'mode': 'development',
+	'target': 'web',
 	'output': {
 		'filename': '[name].js',
 		'path': PATHS.dist,

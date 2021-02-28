@@ -59,7 +59,10 @@ const config = {
 				'template': path.join(PATHS.pages, `${name}.pug`),
 				'inject': false,
 				'templateParameters': {
-					'env': process.env.NODE_ENV,
+					// eslint-disable-next-line import/no-dynamic-require, global-require
+					'styleModules': require(
+						path.join(PATHS.styles, `styles.${process.env.NODE_ENV}.json`),
+					),
 				},
 			}),
 		),
