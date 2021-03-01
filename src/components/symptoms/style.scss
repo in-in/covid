@@ -74,7 +74,7 @@ $symptoms: '.symptoms';
 			fill: $color_base_primary;
 			stroke: $color_base_dark;
 			stroke-width: 1;
-			r: 10;
+			r: 0.5em;
 		}
 
 		#{$symptoms}_point {
