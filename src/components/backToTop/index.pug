@@ -5,7 +5,7 @@ mixin backToTop()
 		type='button'
 		x-data='covid()'
 		x-show='thresholdTop && thresholdBottom'
-		@click.prevent='smoothScroll(".header_menu")'
+		@click.prevent='smoothScroll("#js-header-menu")'
 		@scroll.window='backToTop()'
 		class=s.backToTop)&attributes(attributes)
 		span(class=s.backToTop_text) Back To Top

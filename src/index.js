@@ -34,14 +34,16 @@ window.covid = () => ({
 	},
 	'thresholdBottom': null,
 	'thresholdTop': null,
+
 	thresholdObserver(threshold, el) {
 		new IntersectionObserver((entries) => {
 			this[threshold] = (entries[0].intersectionRatio <= 0);
 		}).observe(el);
 	},
+
 	backToTop() {
-		const header = document.querySelector('.header_menu');
-		const footer = document.querySelector('.footer_menu');
+		const header = document.querySelector('#js-header-menu');
+		const footer = document.querySelector('#js-footer-menu');
 
 		this.thresholdObserver('thresholdTop', header);
 		this.thresholdObserver('thresholdBottom', footer);
