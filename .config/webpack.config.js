@@ -80,7 +80,7 @@ const config = {
 			{
 				'logo': path.join(PATHS.src, 'assets', 'favicon.svg'),
 				'outputPath': path.join(PATHS.assets, 'favicon'),
-				'prefix': path.join(PATHS.assets, 'favicon'),
+				'prefix': path.join(PATHS.assets, 'favicon/'),
 				'inject': true,
 				'favicons': {
 					'appName': 'Covid-19',
