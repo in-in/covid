@@ -66,19 +66,23 @@ $symptoms: '.symptoms';
 			stroke-width: 2px;
 		}
 
-		#{$symptoms}_marker {
-			animation-name: (move);
-			animation-duration: 2s;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-			fill: $color_base_primary;
-			stroke: $color_base_dark;
-			stroke-width: 1;
-			r: 0.5em;
+		@supports (offset-path: path('')) {
+			#{$symptoms}_marker {
+				animation-name: (move);
+				animation-duration: 2s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				fill: $color_base_primary;
+				stroke: $color_base_dark;
+				stroke-width: 1;
+				r: 0.5em;
+			}
 		}
 
-		#{$symptoms}_point {
-			display: none;
+		@supports (offset-path: path('')) {
+			#{$symptoms}_point {
+				display: none;
+			}
 		}
 
 		#{$symptoms}_curve {
