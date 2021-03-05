@@ -41,8 +41,8 @@ const config = {
 	'entry': {
 		'main': path.join(PATHS.src, 'index.js'),
 		'styles': [
-			path.resolve(PATHS.styles, 'inline.scss'),
-			path.resolve(PATHS.styles, 'styles.scss'),
+			path.join(PATHS.styles, 'inline.scss'),
+			path.join(PATHS.styles, 'styles.scss'),
 		],
 	},
 	'module': {
@@ -58,6 +58,7 @@ const config = {
 				'filename': `${name}.html`,
 				'template': path.join(PATHS.pages, `${name}.pug`),
 				'inject': false,
+				'scriptLoading': isDev ? 'defer' : 'blocking',
 				'templateParameters': {
 					// eslint-disable-next-line import/no-dynamic-require, global-require
 					'styleModules': require(

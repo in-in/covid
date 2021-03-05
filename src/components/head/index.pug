@@ -10,4 +10,8 @@ block head
 		else
 			link(rel='stylesheet' href= css)
 
+	each js in htmlWebpackPlugin.files.js
+		if js.includes('main')
+			script(src= js defer)
+
 	title= pageTitle ? `${title} | ${pageTitle}` : title
