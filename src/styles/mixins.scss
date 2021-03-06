@@ -42,7 +42,7 @@
 	$prop: all,
 	$duration: $time_base,
 	$timing: $easing_base) {
-	transition-property: $prop;
+	transition-property: string.unquote($prop);
 	transition-duration: $duration;
 	transition-timing-function: $timing;
 }
