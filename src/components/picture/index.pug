@@ -1,6 +1,6 @@
 mixin picture(src, alt)
 	- let token = tokens[src];
-	- let getPath = (name) => require('../assets/images/' + name).default;
+	- let getPath = (name) => require('../assets/images/' + name);
 	- let getName = (name) => parseFilename(name).name;
 	- let getExt = (name) => parseFilename(name).ext;
 
