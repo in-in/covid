@@ -1,6 +1,8 @@
 @use 'sass:map';
 @use 'sass:string';
 @use 'sass:color';
+@use 'sass:selector';
+@use 'sass:list';
 @use 'functions' as *;
 @use 'tokens' as *;
 
@@ -60,7 +62,13 @@
 	outline: none !important;
 	box-shadow:
 		inset 0 0 0 rem(2) $color_base_primary,
-		inset 0 0 0 rem(4) color.scale($color_base_dark, $alpha: -65%) !important;
+		inset 0 0 0 rem(4) color.scale($color_base_dark, $alpha: -45%) !important;
+
+	@if not list.index(selector.simple-selectors(&), ':focus-within') {
+		&:not(:focus-visible) {
+			box-shadow: none !important;
+		}
+	}
 }
 
 @mixin active($color) {
