@@ -54,6 +54,7 @@ module.exports = {
 		'custom-property-pattern': null,
 		'declaration-bang-space-after': 'never',
 		'declaration-bang-space-before': 'always',
+		'declaration-block-no-duplicate-custom-properties': true,
 		'declaration-block-no-duplicate-properties': true,
 		'declaration-block-no-redundant-longhand-properties': null,
 		'declaration-block-no-shorthand-property-overrides': true,
@@ -129,6 +130,7 @@ module.exports = {
 		'media-query-list-comma-newline-before': 'never-multi-line',
 		'media-query-list-comma-space-after': 'always',
 		'media-query-list-comma-space-before': 'never',
+		'named-grid-areas-no-invalid': true,
 		'no-descending-specificity': [
 			true,
 			{
