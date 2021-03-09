@@ -33,7 +33,7 @@
 		src:
 			url(
 				string.quote(
-					map-deep(
+					map.get(
 						$asset, "font", "path"
 					) + $filename + '.' + $ext));
 	}
@@ -149,7 +149,7 @@
 			background-image:
 				url(
 					#{image-path(
-						name-parse(map-deep($asset, 'image', $name
+						name-parse(map.get($asset, 'image', $name
 					), $num)
 				)}
 			);

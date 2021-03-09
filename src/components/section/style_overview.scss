@@ -1,5 +1,6 @@
-@use 'data' as d;
+@use 'sass:map';
 @use 'config' as *;
+@use 'data' as d;
 
 $section: null !default;
 
@@ -9,7 +10,7 @@ $section: null !default;
 	padding-block-end: t2c(178, end);
 
 	@include breakpoint(s) {
-		background-image: url(#{image-path(map-deep($asset, 'image', 'overview'))});
+		background-image: url(#{image-path(map.get($asset, 'image', 'overview'))});
 		background-position: left 10% top;
 		background-size: t2c(650, end);
 		background-repeat: no-repeat;
