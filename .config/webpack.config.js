@@ -25,7 +25,7 @@ const images = {
 	'test': /\.(png|jpe?g|webp|svg)$/i,
 	'type': 'asset/resource',
 	'generator': {
-		'filename': path.join(PATHS.images, isDev ? '[name].[ext]' : '[contenthash].[ext]'),
+		'filename': path.join(PATHS.images, isDev ? '[name][ext]' : '[contenthash][ext]'),
 	},
 };
 
@@ -33,7 +33,7 @@ const fonts = {
 	'test': /\.(woff2|woff|ttf|otf)$/i,
 	'type': 'asset/resource',
 	'generator': {
-		'filename': path.join(PATHS.fonts, isDev ? '[name].[ext]' : '[contenthash].[ext]'),
+		'filename': path.join(PATHS.fonts, isDev ? '[name][ext]' : '[contenthash][ext]'),
 	},
 };
 
