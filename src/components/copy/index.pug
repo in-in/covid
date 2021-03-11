@@ -1,5 +1,7 @@
+include ../link/index.pug
+
 mixin copy()
 	small(class=s.copy)&attributes(attributes)
 		| &copy;&nbsp;
-		a(href='http://bit.ly/githubprod') in-in
+		+link({str: 'in-in', href: 'http://bit.ly/githubprod'}, 'dark')
 		| , 2020

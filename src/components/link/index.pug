@@ -1,9 +1,11 @@
-mixin link(prop)
-	- let {str, href = '#', icon = true, theme = 'light'} = prop;
+mixin link(prop, ...modifier)
+	- let {str = 'link', href = '#', icon = false} = prop;
 	a(
 		href= href
-		class=cx(s.link, { [s.link__icon]: icon }, s[`link__${theme}`])
+		class=cx(s.link, { [s.link__icon]: icon }, modifier.map(mod => s[`link__${mod}`]))
 		target='_blank'
 		rel='noopener noreferrer'
 		)&attributes(attributes)
-		span(class=s.link_text)= str
+		if str
+			span(class=s.link_text)!= str
+		block

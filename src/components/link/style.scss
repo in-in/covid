@@ -1,4 +1,3 @@
-@use 'sass:color';
 @use 'config' as *;
 
 .link {
@@ -14,7 +13,7 @@
 	}
 
 	&__dark {
-		color: $color_base_primary;
+		color: $color_base_dark;
 	}
 
 	&_text {
