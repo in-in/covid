@@ -1,4 +1,4 @@
-const path = require('path');
+const { parse, join } = require('path');
 const fs = require('fs');
 const { PATHS } = require('./paths');
 
@@ -8,8 +8,8 @@ const saveJSON = (fileName, json) => {
 	if (fileName.includes('inline.scss')) {
 		return;
 	}
-	const { name } = path.parse(fileName);
-	const jsonFileName = path.resolve(
+	const { name } = parse(fileName);
+	const jsonFileName = join(
 		PATHS.styles,
 		isDev ? `${name}.dev.json` : `${name}.prod.json`,
 	);

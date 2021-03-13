@@ -1,6 +1,7 @@
 {
 	"name": "Covid-19",
 	"scripts": {
+		"prebuild": "NODE_ENV=prod webpack --config .config/webpack.prod.js",
 		"build": "NODE_ENV=prod webpack --config .config/webpack.prod.js",
 		"dev": "NODE_ENV=dev webpack --config .config/webpack.dev.js",
 		"gen": "plop --plopfile .config/plopfile.js",

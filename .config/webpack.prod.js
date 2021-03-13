@@ -1,4 +1,4 @@
-const path = require('path');
+const { join } = require('path');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -27,7 +27,7 @@ const styles = {
 					'includePaths': [
 						PATHS.components,
 						PATHS.styles,
-						path.join(PATHS.tokens, 'build'),
+						join(PATHS.tokens, 'build'),
 					],
 				},
 			},

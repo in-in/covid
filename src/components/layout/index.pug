@@ -1,9 +1,13 @@
-- let s = styleModules;
 - let tokens = require('../tokens/build/tokens.json');
 - let d = require('../data/data.json');
 
 <!DOCTYPE html>
 html(lang='en' dir='ltr')
+	if isDev
+		- var s = require('../styles/styles.dev.json');
+	else
+		- var s = require('../styles/styles.prod.json');
+
 	head
 		include ../head/index.pug
 	body(class=s.layout)
