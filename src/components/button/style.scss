@@ -18,6 +18,8 @@
 		transform: scale(0.9);
 	}
 
+	@include active();
+
 	&__big {
 		--spacing: #{$spacing_100};
 	}
