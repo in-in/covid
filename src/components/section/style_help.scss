@@ -8,6 +8,10 @@ $section: null !default;
 	padding-block-start: t2c(108, end);
 	padding-block-end: t2c(108, end);
 
+	@include print() {
+		display: none;
+	}
+
 	#{$section}_virus {
 		@include figure(d.$figures_help, 470);
 	}

@@ -40,10 +40,19 @@ $prevention: '.prevention';
 			align-items: center;
 		}
 
+		@include print() {
+			margin-bottom: 1em;
+		}
+
 		&Content {
 			display: grid;
 			grid-row: 1;
 			gap: em($spacing_gutter);
+
+			@include print() {
+				display: flex;
+				flex-wrap: wrap;
+			}
 
 			/* stylelint-disable-next-line a11y/content-property-no-static-value */
 			&::before {
@@ -89,6 +98,10 @@ $prevention: '.prevention';
 
 			@include breakpoint(s) {
 				width: 90%;
+			}
+
+			@include print() {
+				display: none;
 			}
 		}
 

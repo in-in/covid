@@ -20,6 +20,10 @@
 
 	@include active();
 
+	@include print() {
+		display: none;
+	}
+
 	&__big {
 		--spacing: #{$spacing_100};
 	}

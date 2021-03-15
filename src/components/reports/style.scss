@@ -31,6 +31,10 @@
 			grid-column: 1 / span 10;
 		}
 
+		@include print() {
+			display: none;
+		}
+
 		:global .activeCountry {
 			fill: $color_base_primary;
 

@@ -5,6 +5,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: em($spacing_gutter * 2);
+
+		@include print() {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
 	}
 }
 
@@ -50,11 +54,19 @@
 		width: t2c(280, $context, p);
 		height: auto;
 		margin-block-end: t2c(50, $context, p);
+
+		@include print() {
+			display: none;
+		}
 	}
 
 	&_heading {
 		margin-block-end: em(16);
 
 		@include truncate_text();
+
+		@include print() {
+			white-space: initial;
+		}
 	}
 }

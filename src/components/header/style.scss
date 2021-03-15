@@ -31,9 +31,17 @@
 			justify-self: end;
 			width: auto;
 		}
+
+		@include print() {
+			display: none;
+		}
 	}
 
 	&_button {
 		justify-self: end;
+
+		@include print() {
+			display: none;
+		}
 	}
 }

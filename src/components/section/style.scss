@@ -25,5 +25,9 @@ $section: '.section';
 	#{$section}_virus {
 		height: auto;
 		opacity: 0.4;
+
+		@include print() {
+			display: none;
+		}
 	}
 }

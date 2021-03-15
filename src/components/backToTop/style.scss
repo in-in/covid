@@ -17,6 +17,10 @@
 	font-size: em($font_size, $size_font_min);
 	cursor: pointer;
 
+	@include print() {
+		display: none;
+	}
+
 	&_text {
 		display: block;
 		width: min-content;

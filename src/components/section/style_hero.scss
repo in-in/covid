@@ -9,11 +9,20 @@ $section: null !default;
 	padding-block-start: t2c(300, end);
 	padding-block-end: t2c(208, end);
 
+	@include print() {
+		padding-block-start: 1em;
+		padding-block-end: 1em;
+	}
+
 	@include breakpoint(s) {
 		background-image: url(#{image-path(map.get($asset, 'image', 'hero'))});
 		background-position: right 10% bottom t2c(90, end);
 		background-size: t2c(860, end);
 		background-repeat: no-repeat;
+
+		@include print() {
+			background: none;
+		}
 	}
 
 	#{$section}_inner {

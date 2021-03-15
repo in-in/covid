@@ -14,6 +14,10 @@ $section: null !default;
 		background-position: left 10% top;
 		background-size: t2c(650, end);
 		background-repeat: no-repeat;
+
+		@include print() {
+			background: none;
+		}
 	}
 
 	#{$section}_inner {

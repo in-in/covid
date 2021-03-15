@@ -24,6 +24,10 @@
 		@include breakpoint(m) {
 			grid-column: 1 / span 3;
 		}
+
+		@include print() {
+			display: none;
+		}
 	}
 
 	&_menu {
@@ -33,6 +37,10 @@
 		@include breakpoint(m) {
 			grid-row: 1;
 			grid-column: 4 / -4;
+		}
+
+		@include print() {
+			display: none;
 		}
 	}
 
@@ -44,6 +52,10 @@
 
 		@include breakpoint(m) {
 			grid-column: span 3 / -1;
+		}
+
+		@include print() {
+			display: none;
 		}
 	}
 }
