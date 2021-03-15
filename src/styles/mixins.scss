@@ -18,7 +18,7 @@
 	}
 }
 
-/* stylelint-disable function-url-quotes */
+// stylelint-disable function-url-quotes
 @mixin font_face(
 	$name,
 	$filename,
@@ -38,7 +38,7 @@
 					) + $filename + '.' + $ext));
 	}
 }
-/* stylelint-enable */
+// stylelint-enable
 
 @mixin transition(
 	$prop: all,
@@ -124,7 +124,7 @@
 	padding-inline-end: em($spacing_gutter);
 }
 
-/* stylelint-disable function-url-quotes */
+// stylelint-disable function-url-quotes
 @mixin bg_resolution($name) {
 	$resolutions: 1, 2;
 
@@ -140,7 +140,7 @@
 		}
 	}
 }
-/* stylelint-enable */
+// stylelint-enable
 
 @mixin triangle($size, $dir: 'right') {
 	&::before {

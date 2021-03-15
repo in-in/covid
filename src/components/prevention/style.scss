@@ -54,7 +54,7 @@ $prevention: '.prevention';
 				flex-wrap: wrap;
 			}
 
-			/* stylelint-disable-next-line a11y/content-property-no-static-value */
+			// stylelint-disable-next-line a11y/content-property-no-static-value
 			&::before {
 				--size: #{em(56, $size_font_max * $size_font_ms_u_3)};
 

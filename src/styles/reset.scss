@@ -10,14 +10,14 @@
 ::after {
 	box-sizing: border-box;
 
-	/* stylelint-disable time-min-milliseconds */
+	// stylelint-disable time-min-milliseconds
 	@media (prefers-reduced-motion: reduce) {
 		scroll-behavior: auto !important;
 		transition-duration: 0.001s !important;
 		animation-duration: 0.001s !important;
 		animation-iteration-count: 1 !important;
 	}
-	/* stylelint-enable */
+	// stylelint-enable
 }
 
 H1,
