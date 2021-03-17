@@ -61,6 +61,7 @@
 	}
 
 	&_heading {
+		max-width: 100%;
 		margin-block-end: em(16);
 
 		@include truncate_text();
