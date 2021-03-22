@@ -50,23 +50,13 @@ BUTTON {
 }
 
 INPUT,
-BUTTON,
-TEXTAREA,
-SELECT {
+BUTTON {
 	word-spacing: inherit;
 	letter-spacing: inherit;
 	font: inherit;
 }
 
-TEXTAREA {
-	resize: none;
-}
-
 IMG {
 	display: block;
 	max-width: 100%;
-}
-
-CITE {
-	font-style: normal;
 }
