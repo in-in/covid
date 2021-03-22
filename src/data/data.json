@@ -14,7 +14,7 @@
 		}
 	],
 	"hero": {
-		"heading": "Stay At&nbsp;Home Quarantine To&nbsp;Stop Corona Virus",
+		"heading": "Stay At&nbsp;Home Quarantine To&nbsp;Stop Coronavirus",
 		"subheading": "COVID-19 Alert",
 		"description": "People who have been exposed to&nbsp;the new coronavirus and are at&nbsp;risk of&nbsp;COVID-19 may practice self-quarantine. Health experts recommend that self-quarantine should last 14&nbsp;days."
 	},
@@ -39,7 +39,7 @@
 				"image": "assetIconContagion2"
 			},
 			{
-				"title": "Containted Objects",
+				"title": "Contained Objects",
 				"description": "Touching a&nbsp;surface or&nbsp;object on&nbsp;which there is&nbsp;a&nbsp;virus, and then touching your own mouth, nose, or&nbsp;your eyes",
 				"image": "assetIconContagion3"
 			}
@@ -62,7 +62,7 @@
 			},
 			{
 				"title": "Wash Your Hands",
-				"description": "Wash your hands often with soap and water for at&nbsp;least 20&nbsp;seconds, especially after you&rsquo;ve been in&nbsp;a&nbsp;public place or&nbsp;after you&rsquo;ve blown your nose, coughed or&nbsp;sneezed. If&nbsp;soap and water are not available, use a&nbsp;hand sanitizer containing at&nbsp;least&nbsp;60% alcohol. Cover all hand surfaces and rub them until they are dry.",
+				"description": "Wash your hands often with soap and water for at&nbsp;least 20&nbsp;seconds, especially after you&rsquo;ve been in&nbsp;a&nbsp;public place, or&nbsp;after you&rsquo;ve blown your nose, coughed or&nbsp;sneezed. If&nbsp;soap and water are not available, use a&nbsp;hand sanitizer containing at&nbsp;least&nbsp;60% alcohol. Cover all hand surfaces and rub them until they are dry.",
 				"image": "assetIconPrevention2"
 			},
 			{
