@@ -29,6 +29,7 @@ export const assetIconSocial4 = "social_twitter.svg";
 export const assetImageDir = "../assets/images/";
 export const assetImageHero = "hero.svg";
 export const assetImageOverview = "overview.svg";
+export const assetImageSocialPreview = "social_preview.png";
 export const breakpointXs = "320";
 export const breakpointS = "640";
 export const breakpointM = "960";

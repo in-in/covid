@@ -9,6 +9,9 @@
 			},
 			"overview": {
 				"value": "overview.svg"
+			},
+			"social_preview": {
+				"value": "social_preview.png"
 			}
 		}
 	}
