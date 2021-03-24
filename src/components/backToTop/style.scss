@@ -9,6 +9,9 @@
 	right: 1em;
 	bottom: 1em;
 	z-index: 30;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: em($size, $font_size);
 	height: em($size, $font_size);
 	overflow: hidden;
@@ -26,6 +29,7 @@
 		width: min-content;
 		margin-right: auto;
 		margin-left: auto;
+		text-align: center;
 		font-weight: $typography_weight_semi_bold;
 		line-height: 1;
 	}

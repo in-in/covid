@@ -1,8 +1,9 @@
 include ../icon/index.pug
 
 mixin backToTop()
-	button(
+	a(
 		type='button'
+		href='#js-header-menu'
 		x-data='covid()'
 		x-show='thresholdTop && thresholdBottom'
 		@click.prevent='smoothScroll("#js-header-menu")'
