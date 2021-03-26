@@ -51,6 +51,7 @@
 
 @mixin hover($selector: null, $combinator: ' ') {
 	@media (hover: hover) and (pointer: fine) {
+		&:focus#{$combinator}#{$selector},
 		&:hover#{$combinator}#{$selector} {
 			@content;
 		}
