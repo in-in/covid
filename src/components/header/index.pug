@@ -7,5 +7,5 @@ mixin header()
 		+logo()(class=s.header_logo)
 		+menu(d.menu)(class=s.header_menu id='js-header-menu')
 		+button({text: 'Contact'}, 'plain')(
-			@click='smoothScroll("#help_form")'
+			@click.prevent='smoothScroll("#help_form")'
 			class=s.header_button)

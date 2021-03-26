@@ -8,5 +8,5 @@ mixin menu(list)
 					a(
 						href='#' + title.toLowerCase()
 						class=s.menu_link
-						@click=`smoothScroll('${href}')`
+						@click.prevent=`smoothScroll('${href}')`
 					)= title
