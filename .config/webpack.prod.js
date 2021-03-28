@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
+const CopyPlugin = require('copy-webpack-plugin');
 const common = require('./webpack.config');
 const { PATHS } = require('./paths');
 
@@ -94,6 +95,11 @@ const config = {
 			'filename': '[name].[contenthash].css',
 		}),
 		new CssoWebpackPlugin(),
+		new CopyPlugin({
+			'patterns': [
+				{ 'from': join(PATHS.src, 'robots.txt'), 'to': PATHS.dist },
+			],
+		}),
 	],
 	'module': {
 		'rules': [
