@@ -3,6 +3,7 @@
 
 :root {
 	overflow-x: hidden;
+	font-family: $typography_family_main;
 }
 
 *:focus {
@@ -12,7 +13,6 @@
 BODY {
 	background-color: $color_base_white;
 	color: $color_font_base;
-	font-family: $typography_family_main;
 	font-size: locks($size_font_min, $size_font_max);
 	line-height: $size_line_height_normal;
 }
