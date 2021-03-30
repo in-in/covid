@@ -11,6 +11,7 @@ mixin headingList(title, list)
 				li
 					button(
 						class=s.headingList_button
+						type='button'
 						:class=`{
 							'${s.headingList_button__active}': activeCountry === '${name.toLowerCase()}'}`
 						@click=`activeCountry = '${name.toLowerCase()}'`)
