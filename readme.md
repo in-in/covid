@@ -8,7 +8,7 @@
 
 <p align="center">COVID-19 is a fast and mobile-first website. It works perfectly in all mainstream web browsers, tablets and phones. This simple static site takes advantage of the following technologies: Pug, SASS, PostCSS, Alpine, Webpack.</p>
 
-<h4 align="center">
+<p align="center">
 	<a href="#target-browsers">Target Browsers</a>
 	&nbsp;•&nbsp;
 	<a href="#main-features">Main Features</a>
@@ -16,7 +16,7 @@
 	<a href="#how-to-use">How To Use</a>
 	&nbsp;•&nbsp;
 	<a href="#credits">Credits</a>
-</h4>
+</p>
 
 ## Target Browsers
 
@@ -76,4 +76,4 @@ npm run tokens
 - Fonts: [Poppins](https://fonts.google.com/specimen/Poppins?preview.text_type=custom#about) and [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display?preview.text_type=custom#about)
 ---
 
-> <sub>Built with ❤︎ by <a href="https://github.com/in-in">in-in</a></sub>
+<sub>built with ❤︎ by <a href="https://github.com/in-in">in-in</a></sub>
