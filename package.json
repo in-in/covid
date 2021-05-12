@@ -33,7 +33,7 @@
 		"image-webpack-loader": "7.0.1",
 		"mini-css-extract-plugin": "1.4.0",
 		"plop": "2.7.4",
-		"postcss": "8.2.9",
+		"postcss": "8.2.10",
 		"postcss-loader": "5.2.0",
 		"postcss-media-minmax": "5.0.0",
 		"postcss-modules": "4.0.0",
